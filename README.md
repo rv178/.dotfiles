@@ -1,20 +1,12 @@
 # My Dotfiles
 
-### Picom
+Install Picom `sudo aura -A picom-jonaburg-git`
 
-`sudo aura -A picom-jonaburg-git`
+Install BSPWM `sudo pacman -S bspwm`
 
-### BSPWM
+SXHKD `sudo pacman -S sxhkd`
 
-`sudo pacman -S bspwm`
-
-### SXHKD
-
-`sudo pacman -S sxhkd`
-
-### NeoVim (nvim)
-
-`sudo pacman -S neovim`
+Install NeoVim (nvim) `sudo pacman -S neovim`
 
 ### Screenshots
 
