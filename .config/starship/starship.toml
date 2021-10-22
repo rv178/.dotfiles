@@ -1,0 +1,73 @@
+[battery]
+full_symbol = "🔋"
+charging_symbol = "🔌"
+discharging_symbol = "⚡"
+[[battery.display]]
+threshold = 30
+style = "bold red"
+[character]
+error_symbol = "[✖](bold red) "
+[cmd_duration]
+min_time = 10_000
+format = " took [$duration]($style)"
+[directory]
+truncation_length = 5
+read_only = " "
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+[aws]
+symbol = "  "
+[conda]
+symbol = " "
+[dart]
+symbol = " "
+[docker_context]
+symbol = " "
+[elixir]
+symbol = " "
+[elm]
+symbol = " "
+[git_branch]
+symbol = " "
+[golang]
+symbol = " "
+[hg_branch]
+symbol = " "
+[java]
+symbol = " "
+[julia]
+symbol = " "
+[memory_usage]
+symbol = " "
+[nim]
+symbol = " "
+[nix_shell]
+symbol = " "
+[package]
+symbol = " "
+format = "| [$symbol($version )]($style)"
+[perl]
+symbol = " "
+[php]
+symbol = " "
+[python]
+symbol = " "
+[ruby]
+symbol = " "
+[rust]
+symbol = " "
+[nodejs]
+format = "| [$symbol($version )]($style)"
+[scala]
+symbol = " "
+[shlvl]
+symbol = " "
+[swift]
+symbol = "ﯣ "
+[time]
+time_format = "%T"
+format = "⌛ $time($style) "
+style = "bright-white"
+disabled = false
+[username]
+style_user = "bold dimmed blue"
+show_always = true
