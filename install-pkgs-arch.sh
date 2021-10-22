@@ -32,8 +32,6 @@ sudo aura -S --noconfirm --needed meld
 sudo aura -S --noconfirm --needed btop
 sudo aura -S --noconfirm --needed wget
 sudo aura -S --noconfirm --needed sxiv
-sudo aura -S --noconfirm --needed tmux
-sudo aura -S --noconfirm --needed tldr
 sudo aura -S --noconfirm --needed stow
 sudo aura -S --noconfirm --needed gvfs
 sudo aura -S --noconfirm --needed unzip
@@ -106,7 +104,6 @@ sudo aura -S --noconfirm --needed nvidia-settings
 ##################################################################################################################
 # Development tools
 ##################################################################################################################
-sudo aura -S --noconfirm --needed npm
 sudo aura -S --noconfirm --needed neovim
 sudo aura -S --noconfirm --needed nodejs
 sudo aura -S --noconfirm --needed python3
