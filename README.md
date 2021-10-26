@@ -1,6 +1,6 @@
 # My Dotfiles
 
-Coming soon!
+Coming soon! :)
 
 ### Screenshots
 
