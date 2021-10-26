@@ -13,6 +13,8 @@ sudo aura -S --noconfirm --needed sxhkd
 sudo aura -S --noconfirm --needed ranger
 sudo aura -S --noconfirm --needed discord
 sudo aura -S --noconfirm --needed rofi
+sudo aura -S --noconfirm --needed brightnessctl
+sudo aura -S --noconfirm --needed redshift
 
 #Install pkgs from the AUR
 sudo aura -A --noconfirm --needed alacritty
