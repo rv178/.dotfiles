@@ -18,5 +18,7 @@ sudo aura -S --noconfirm --needed redshift
 
 #Install pkgs from the AUR
 sudo aura -A --noconfirm --needed alacritty
+sudo aura -A --noconfirm --needed brave-bin
+sudo aura -A --noconfirm --needed picom-jonaburg-git
 sudo aura -A --noconfirm --needed polybar
 sudo aura -A --noconfirm --needed nerd-fonts-jetbrains-mono
