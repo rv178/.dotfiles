@@ -1,0 +1,275 @@
+;=========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;==========================================================
+
+[colors]
+;background = ${xrdb:background:#ff4242}
+background = ${xrdb:background:#aa282C34}
+foreground = ${xrdb:color7:#ffffff}
+
+;  _                    
+; | |__   __ _ _ __ ___ 
+; | '_ \ / _` | '__/ __|
+; | |_) | (_| | |  \__ \
+; |_.__/ \__,_|_|  |___/
+
+[bar/bar]
+enable-ipc=true
+height = 35
+width = 100%
+font-0 =Jetbrains Mono Nerd Font:size=9.5;3
+offset-x = 0
+offset-y = 0
+radius = 0
+border-size = 0
+border-color = ${colors.foreground}
+background = ${colors.background}
+foreground = ${colors.foreground}
+tray-position=right
+tray-detached=false
+line-size = 2
+padding=0
+modules-left = powermenu launcher cpu memory
+;modules-left = powermenu launcher
+modules-center = bspwm i3 sway
+modules-right = battery backlight pulseaudio time 
+;modules-right = time 
+scroll-up = bspwn-wsnext 
+scroll-down = bspwn-wsprev
+override-redirect = false
+wm-restack = bspwm
+;                      _       _           
+;  _ __ ___   ___   __| |_   _| | ___  ___ 
+; | '_ ` _ \ / _ \ / _` | | | | |/ _ \/ __|
+; | | | | | | (_) | (_| | |_| | |  __/\__ \
+; |_| |_| |_|\___/ \__,_|\__,_|_|\___||___/
+                                         
+[module/launcher]
+type=custom/text
+content = 
+content-foreground=${colors.foreground}
+;content-background = "#D08770"
+content-padding=3
+click-left=rofi -show drun
+
+[module/backlight]
+type = internal/backlight
+card = amdgpu_bl0
+format = <ramp> <label>
+format-padding = 2
+label = %percentage%%
+ramp-0 = " "
+ramp-1 = " "
+ramp-2 = " "
+ramp-3 = " "
+ramp-4 = " "
+
+
+[module/bspwm]
+type = internal/bspwm
+format = <label-state> <label-mode>
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+index-sort = true
+enable-click = true
+reverse-scroll = true
+
+label-focused = %index%
+label-focused-underline = ${colors.foreground}
+label-focused-padding = 2
+
+label-occupied = %index%
+label-occupied-padding = 2
+
+label-empty = %index%
+label-empty-padding = 2
+
+label-urgent = 𥉉
+label-urgent-padding = 2
+label-urgent-foreground = ${colors.background}
+label-urgent-background = ${colors.foreground}
+label-urgent-overline = ${colors.background}
+label-urgent-font = 0
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+index-sort = true
+enable-click = true
+reverse-scroll = true
+
+label-focused = %index%
+label-focused-underline = ${colors.foreground}
+label-focused-padding = 2
+
+label-occupied = %index%
+label-occupied-padding = 2
+
+label-empty = %index%
+label-empty-padding = 2
+
+label-urgent = 𥉉
+label-urgent-padding = 2
+label-urgent-foreground = ${colors.background}
+label-urgent-background = ${colors.foreground}
+label-urgent-overline = ${colors.background}
+label-urgent-font = 0
+
+[module/sway]
+type = internal/sway
+format = <label-state> <label-mode>
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+index-sort = true
+enable-click = true
+reverse-scroll = true
+
+label-focused = %index%
+label-focused-underline = ${colors.foreground}
+label-focused-padding = 2
+
+label-occupied = %index%
+label-occupied-padding = 2
+
+label-empty = %index%
+label-empty-padding = 2
+
+label-urgent = 𥉉
+label-urgent-padding = 2
+label-urgent-foreground = ${colors.background}
+label-urgent-background = ${colors.foreground}
+label-urgent-overline = ${colors.background}
+label-urgent-font = 0
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-padding = 2
+format-foreground = ${colors.foreground}
+label = %percentage%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-padding = 2
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+label = " %mb_used%"
+
+[module/time]
+type = internal/date
+interval = 1
+format-margin = 0
+time = "%H:%M"
+date = "%d %b"
+
+label = %date%, %time%
+label-foreground = ${colors.foreground}
+label-background = ${colors.background}
+label-padding = 1
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-margin = 1
+format-volume = <ramp-volume><label-volume>
+label-volume = %percentage:4:4%%
+format-volume-foreground = ${colors.foreground}
+format-volume-background = ${colors.background}
+format-volume-padding = 1
+use-ui-max = false
+interval = 5
+
+ramp-volume-0 = 奄
+ramp-volume-1 = 奔
+ramp-volume-2 = 墳
+ramp-volume-3 = 墳
+label-muted = 婢 0%
+label-muted-background = ${colors.background}
+label-muted-foreground = ${colors.foreground}
+label-muted-padding = 1
+
+[module/powermenu]
+type = custom/menu
+expand-left = true
+label-open = 
+label-open-foreground = ${colors.foreground}
+label-open-background = "#ea696b"
+label-open-padding = 3
+label-close = 
+label-close-foreground = ${colors.foreground}
+label-close-background = "#ea696b"
+label-close-padding = 3
+
+menu-0-0 = 
+menu-0-0-foreground = ${colors.foreground}
+menu-0-0-padding = 2
+menu-0-0-exec = "poweroff"
+menu-0-1 = 
+menu-0-1-foreground = ${colors.foreground}
+menu-0-1-padding = 2
+menu-0-1-exec = reboot
+menu-0-2 = ⏾
+menu-0-2-foreground = ${colors.foreground}
+menu-0-2-padding = 2
+menu-0-2-exec = "systemctl suspend;betterlockscreen -l blur"
+menu-0-3 = 
+menu-0-3-foreground = ${colors.foreground}
+menu-0-3-padding = 2
+menu-0-3-exec = "betterlockscreen -l blur"
+
+[module/battery]
+type = internal/battery
+full-at = ${config.battery-full-at}
+battery = ${config.battery-bat}
+adapter = ${config.battery-adp}
+content-padding= 2
+
+format-padding = 2
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = ${colors.background}
+animation-charging-0 = "  "
+animation-charging-1 = "  "
+animation-charging-2 = "  "
+animation-charging-3 = "  "
+animation-charging-4 = "  "
+animation-charging-framerate = 750
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-underline = ${colors.background}
+ramp-capacity-0 = "  "
+ramp-capacity-1 = "  "
+ramp-capacity-2 = "  "
+ramp-capacity-3 = "  "
+ramp-capacity-4 = "  "
+ramp-capacity-foreground = "#BF616A"
+
+label-full = "  100% "
+label-full-foreground = "#FFFFFF"
+label-full-underline = ${colors.background}
+
+[settings]
+screenchange-reload = true
+
+[config]
+battery-full-at = 100
+battery-bat = BAT0
+battery-adp = ADP0
+
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
