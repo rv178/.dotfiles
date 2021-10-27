@@ -15,6 +15,7 @@ sudo aura -S --noconfirm --needed discord
 sudo aura -S --noconfirm --needed rofi
 sudo aura -S --noconfirm --needed brightnessctl
 sudo aura -S --noconfirm --needed redshift
+sudo aura -S --noconfirm --needed zsh
 
 #Install pkgs from the AUR
 sudo aura -A --noconfirm --needed alacritty
