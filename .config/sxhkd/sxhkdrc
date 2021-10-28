@@ -9,13 +9,17 @@ super + Return
 super + c
         rofi -show drun
 
+super + p
+		rofi -show p -modi p:~/.local/bin/rofi-power-menu
 # make sxhkd reload its configuration files:
 super + shift + r
 	pkill -USR1 -x sxhkd
 
 super + shift + e
     bspc wm -r
-#
+
+super + l
+		betterlockscreen -l blur
 
 PrtSc
     spectacle
