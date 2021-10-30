@@ -40,7 +40,7 @@ line-size = 2
 padding=0
 modules-left = powermenu launcher cpu memory
 ;modules-left = powermenu launcher
-modules-center = bspwm i3 sway
+modules-center = bspwm i3
 modules-right = battery backlight pulseaudio time 
 ;modules-right = time 
 scroll-up = bspwn-wsnext 
@@ -83,14 +83,14 @@ index-sort = true
 enable-click = true
 reverse-scroll = true
 
-label-focused = %index%
+label-focused = 
 label-focused-underline = ${colors.foreground}
 label-focused-padding = 2
 
-label-occupied = %index%
+label-occupied = 
 label-occupied-padding = 2
 
-label-empty = %index%
+label-empty = 
 label-empty-padding = 2
 
 label-urgent = 𥉉
@@ -102,32 +102,6 @@ label-urgent-font = 0
 
 [module/i3]
 type = internal/i3
-format = <label-state> <label-mode>
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-index-sort = true
-enable-click = true
-reverse-scroll = true
-
-label-focused = %index%
-label-focused-underline = ${colors.foreground}
-label-focused-padding = 2
-
-label-occupied = %index%
-label-occupied-padding = 2
-
-label-empty = %index%
-label-empty-padding = 2
-
-label-urgent = 𥉉
-label-urgent-padding = 2
-label-urgent-foreground = ${colors.background}
-label-urgent-background = ${colors.foreground}
-label-urgent-overline = ${colors.background}
-label-urgent-font = 0
-
-[module/sway]
-type = internal/sway
 format = <label-state> <label-mode>
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
