@@ -11,17 +11,16 @@ do
 done
 
 cd ~/.dotfiles/.config
-dots=$(ls -d */)
+dots=$(ls -d ~/.dotfiles/.config/*)
 for dot in $dots
 do
-    stow -D "$dot" -t ~/.config
-    stow "$dot" -t ~/.config
+#    rm -rf "$dot" ~/.config
+    cp -r "$dot" ~/.config
 done
 
 cd ~/.dotfiles/.home
-dots=$(ls -d */)
+dots=$(ls -d ~/.dotfiles/.home/*)
 for dot in $dots
 do
-    stow -D "$dot" -t ~/
-    stow "$dot" -t ~/
+    cp -r "$dot" ~/
 done
