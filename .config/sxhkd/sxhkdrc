@@ -7,10 +7,10 @@ super + Return
 	alacritty
 
 super + c
-        rofi -show drun
+        rofi -show drun -show-icons
 
 super + p
-		rofi -show p -modi p:~/.local/bin/rofi-power-menu
+		rofi -show p -modi p:rofi-power-menu
 # make sxhkd reload its configuration files:
 super + shift + r
 	pkill -USR1 -x sxhkd
@@ -20,6 +20,10 @@ super + shift + e
 
 super + l
 		betterlockscreen -l blur
+
+super + shift + d
+	discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy
+
 
 PrtSc
     spectacle
