@@ -7,7 +7,7 @@ dunst &
 
 # composting and wallpaper
 picom &
-feh --bg-fill ~/Pictures/wallpaper8.jpg
+feh --bg-fill ~/Pictures/wallpapers/wallpaper8.jpg
 /usr/lib/polkit-kde-authentication-agent-1 &
 
 # wi-fi

@@ -9,8 +9,6 @@ super + Return
 super + c
         rofi -show drun -show-icons
 
-super + p
-		rofi -show p -modi p:rofi-power-menu
 # make sxhkd reload its configuration files:
 super + shift + r
 	pkill -USR1 -x sxhkd
