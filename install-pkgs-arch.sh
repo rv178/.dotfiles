@@ -27,6 +27,7 @@ sudo aura -S --noconfirm --needed neovim
 sudo aura -S --noconfirm --needed bspwm
 sudo aura -S --noconfirm --needed sxhkd
 sudo aura -S --noconfirm --needed ranger
+sudo aura -S --noconfirm --needed neofetch
 
 # sudo aura -S --noconfirm --needed discord
 sudo aura -S --noconfirm --needed rofi
