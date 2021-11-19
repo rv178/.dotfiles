@@ -1,4 +1,4 @@
-rm -rf ~/.config/ranger ~/.moc ~/.config/dunst/ ~/.zprofile ~/.xinitrc ~/.config/bspwm ~/.config/nvim ~/.config/polybar ~/.config/zathura ~/.gitconfig ~/.zshrc
+rm -rf ~/.config/ranger ~/.config/dunst ~/.zprofile ~/.xinitrc ~/.config/sxhkd ~/.config/betterlockscreenrc ~/.config/bspwm ~/.config/nvim ~/.config/polybar ~/.config/zathura ~/.gitconfig ~/.zshrc
 
 cd ~/.dotfiles/.config/
 dots=$(ls -d */)
