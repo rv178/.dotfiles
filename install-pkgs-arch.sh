@@ -42,7 +42,11 @@ sudo aura -A --noconfirm --needed nerd-fonts-jetbrains-mono
 sudo aura -A --noconfirm --needed montserrat-ttf
 sudo aura -A --noconfirm --needed polybar
 
- curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+mkdir ~/.zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 
 read -r -p "Are you installing this on a virtual machine? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
