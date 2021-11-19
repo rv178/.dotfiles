@@ -1,4 +1,12 @@
-rm -rf ~/.config/ranger ~/.config/dunst ~/.zprofile ~/.xinitrc ~/.config/sxhkd ~/.config/betterlockscreenrc ~/.config/bspwm ~/.config/nvim ~/.config/polybar ~/.config/zathura ~/.gitconfig ~/.zshrc
+rm -rf ~/.config/rofi ~/.local/share/rofi ~/.config/ranger ~/.config/dunst ~/.zprofile ~/.xinitrc ~/.config/sxhkd ~/.config/betterlockscreenrc ~/.config/bspwm ~/.config/nvim ~/.config/polybar ~/.config/zathura ~/.zshrc
+
+cd ~/.dotfiles/.home/
+homefiles=$(ls -d */)
+for home in $homefiles
+do 
+	stow -D $home -t ~/
+	stow $home -t ~/
+done
 
 cd ~/.dotfiles/.config/
 dots=$(ls -d */)
