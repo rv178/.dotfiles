@@ -16,5 +16,14 @@ do
     cp -r "$dot" ~/.config
 done
 
+mkdir -p ~/Pictures
+mkdir -p ~/Pictures/wallpapers
+
+wp-folder=$(ls -d ~/.dotfiles/.assets/wallpapers/*)
+for wallpaper in $wp-folder
+do
+    cp -r "wallpaper" ~/Pictures/wallpapers
+done
+
 cp -r ~/.dotfiles/.home/.local/share/rofi ~/.local/share
 cp -r ~/.dotfiles/.home/.zshrc ~
