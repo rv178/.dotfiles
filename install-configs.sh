@@ -14,7 +14,6 @@ cd ~/.dotfiles/.config
 dots=$(ls -d ~/.dotfiles/.config/*)
 for dot in $dots
 do
-#    rm -rf "$dot" ~/.config
     cp -r "$dot" ~/.config
 done
 
