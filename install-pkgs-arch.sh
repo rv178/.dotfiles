@@ -36,7 +36,7 @@ sudo aura -S --noconfirm --needed zsh
 sudo aura -S --noconfirm --needed polkit-kde-agent
 sudo aura -S --noconfirm --needed feh
 
-#Install pkgs from the AUR
+# Install pkgs from the AUR
 sudo aura -A --noconfirm --needed brave-bin
 sudo aura -A --noconfirm --needed polybar
 
@@ -48,7 +48,7 @@ then
 else
 	sudo aura -A --noconfirm --needed nerd-fonts-jetbrains-mono
 	sudo aura -A --noconfirm --needed montserrat-ttf
-    sudo aura -A --noconfirm --needed picom-jonaburg-git
+	sudo aura -A --noconfirm --needed picom-jonaburg-git
 fi
 
 echo "[#################[ Finished Installing Packages! ]###################]"
