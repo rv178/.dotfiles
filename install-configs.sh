@@ -10,16 +10,18 @@ do
     rm -rf ~/$dir
 done
 
-cd ~/.dotfiles/.config
 dots=$(ls -d ~/.dotfiles/.config/*)
 for dot in $dots
 do
     cp -r "$dot" ~/.config
 done
 
-cd ~/.dotfiles/.home
-dots=$(ls -d ~/.dotfiles/.home/*)
-for dot in $dots
+mkdir ~/Pictures/wallpapers
+wp-folder=$(ls -d ~/.dotfiles/.assets/wallpapers/*)
+for wallpaper in $wp-folder
 do
-    cp -r "$dot" ~/
+    cp -r "wallpaper" ~/Pictures/wallpapers
 done
+
+cp -r ~/.dotfiles/.home/.local/share/rofi ~/.local/share
+cp -r ~/.dotfiles/.home/.zshrc ~
