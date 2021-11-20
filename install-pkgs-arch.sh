@@ -20,28 +20,30 @@ sudo make clean install
 # sudo echo 'Include = /etc/pacman.d/chaotic-mirrorlist' >> /etc/pacman.conf
 
 # Synchronize package databases 
-sudo aura -Syu
+sudo pacman -Syu
 
 # Install pkgs
-sudo aura -S --noconfirm --needed neovim
-sudo aura -S --noconfirm --needed bspwm
-sudo aura -S --noconfirm --needed sxhkd
-sudo aura -S --noconfirm --needed ranger
-sudo aura -S --noconfirm --needed neofetch
+sudo pacman -S --noconfirm --needed neovim
+sudo pacman -S --noconfirm --needed bspwm
+sudo pacman -S --noconfirm --needed sxhkd
+sudo pacman -S --noconfirm --needed ranger
+sudo pacman -S --noconfirm --needed neofetch
 
 # sudo aura -S --noconfirm --needed discord
-sudo aura -S --noconfirm --needed rofi
-sudo aura -S --noconfirm --needed brightnessctl
-sudo aura -S --noconfirm --needed redshift
-sudo aura -S --noconfirm --needed zsh
-sudo aura -S --noconfirm --needed polkit-kde-agent
-sudo aura -S --noconfirm --needed feh
+sudo pacman -S --noconfirm --needed rofi
+sudo pacman -S --noconfirm --needed brightnessctl
+sudo pacman -S --noconfirm --needed redshift
+sudo pacman -S --noconfirm --needed zsh
+sudo pacman -S --noconfirm --needed polkit-kde-agent
+sudo pacman -S --noconfirm --needed feh
+
+sudo pacman -S ttf-nerd-fonts-symbols
+sudo pacman -S ttf-jetbrains-mono
 
 # Install pkgs from the AUR
-sudo aura -A --noconfirm --needed brave-bin
-sudo aura -A --noconfirm --needed nerd-fonts-jetbrains-mono
-sudo aura -A --noconfirm --needed montserrat-ttf
-sudo aura -A --noconfirm --needed polybar
+sudo aura -Acax --noconfirm --needed brave-bin
+sudo aura -Acax --noconfirm --needed montserrat-ttf
+sudo aura -Acax --noconfirm --needed polybar
 
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -54,7 +56,7 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
 	echo "[#################[ Finished Installing Packages! ]###################]"
 else
-	sudo aura -A --noconfirm --needed picom-jonaburg-git
+	sudo aura -Acax --noconfirm --needed picom-jonaburg-git
 	echo "[#################[ Finished Installing Packages! ]###################]"
 fi
 
