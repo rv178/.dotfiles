@@ -2,27 +2,3 @@ snippet asyncdef
 async def ${0:functionname}(${1:args}):
 	pass
 endsnippet
-
-snippet cog
-import discord
-from discord.ext import commands
-import logging
-import coloredlogs
-
-log = logging.getLogger("${0:cogname}")
-coloredlogs.install(logger=log)
-
-class ${1:cogname}(commands.Cog):
-	"""
-	"""
-	
-	def __init__(self,bot):
-		self.bot = bot
-	
-	@commands.Cog.listener()
-	async def on_ready(self):
-		log.warn(f"{self.__class__.__name__} Cog has been loaded")
-
-def setup(bot):
-	bot.add_cog(${2:cogname}(bot))
-endsnippet

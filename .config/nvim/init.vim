@@ -32,9 +32,6 @@ nnoremap / /\v
 vnoremap / /\v
 autocmd BufWritePost *.tex silent! !pdflatex %
 "make a compile script for groff documents and complie on save
-autocmd BufWritePost *.ms silent! !./compile.sh
-autocmd BufWritePost config.*h !sudo make clean install
-autocmd BufWritePost *.cpp !make
 nnoremap Y y$
 nnoremap Q <Nop>
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
@@ -231,7 +228,7 @@ augroup end
 hi! Normal ctermbg=NONE guibg=NONE
 nnoremap <esc> :noh<CR>
 " enabling mouse support
-"set mouse=a
+set mouse=a
 set window title
 set title
 set ttyfast
