@@ -36,6 +36,7 @@ sudo pacman -S --noconfirm --needed redshift
 sudo pacman -S --noconfirm --needed zsh
 sudo pacman -S --noconfirm --needed polkit-kde-agent
 sudo pacman -S --noconfirm --needed feh
+sudo pacman -S --noconfirm --needed exa
 
 sudo pacman -S ttf-nerd-fonts-symbols
 sudo pacman -S ttf-jetbrains-mono
