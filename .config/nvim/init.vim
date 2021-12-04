@@ -1,7 +1,6 @@
 syntax on
 call plug#begin('~/.vim/plugged')
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
-Plug 'romgrk/barbar.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'SirVer/ultisnips'
 Plug 'nvim-lua/plenary.nvim'
@@ -67,6 +66,7 @@ nmap <C-n> :NERDTreeToggle<CR>
 vmap cc <Plug>NERDCommenterToggle
 nmap cc <Plug>NERDCommenterToggle
 set scrolloff=999
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts=1
 let g:airline_theme = 'nord'
 let g:smoothe_enabled = 1
