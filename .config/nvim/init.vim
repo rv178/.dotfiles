@@ -1,6 +1,7 @@
 syntax on
 call plug#begin('~/.vim/plugged')
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'kassio/neoterm'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'SirVer/ultisnips'
 Plug 'nvim-lua/plenary.nvim'
@@ -24,7 +25,6 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim' " needed for telescope
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'glepnir/dashboard-nvim'
 call plug#end()
 let mapleader=" "
 nnoremap / /\v
@@ -211,6 +211,13 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+let g:neoterm_default_mod='belowright' " open terminal in bottom split
+let g:neoterm_size=16 " terminal split size
+let g:neoterm_autoscroll=1 " scroll to the bottom when running a command
+nnoremap <leader><cr> :TREPLSendLine<cr>j " send current line and move down
+vnoremap <leader><cr> :TREPLSendSelection<cr> " send current selection
+
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
 " Remap for rename current word
