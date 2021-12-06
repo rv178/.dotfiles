@@ -23,4 +23,3 @@ Open NeoVim and do `:PlugInstall`
 ![Alt text](./.assets/screenshots/ss1.png "Screenshot 1")
 ![Alt text](./.assets/screenshots/ss2.png "Screenshot 2")
 ![Alt text](./.assets/screenshots/ss3.png "Screenshot 3")
-![Alt text](./.assets/screenshots/ss3.png "Screenshot 3")
