@@ -2,6 +2,7 @@
 ;background = ${xrdb:background:#ff4242}
 background = ${xrdb:background:#3B4252}
 foreground = ${xrdb:color7:#D8DEE9}
+powermenu = ${xrdb:color7:#4C566A}
 
 ;  _                    
 ; | |__   __ _ _ __ ___ 
@@ -27,7 +28,7 @@ line-size = 2
 padding=0
 modules-left = powermenu bspwm
 modules-center = title
-modules-right = battery backlight pulseaudio cpu time
+modules-right = backlight battery pulseaudio cpu time
 scroll-up = bspwn-wsnext 
 scroll-down = bspwn-wsprev
 override-redirect = false
@@ -45,13 +46,12 @@ type = internal/xwindow
 ;   <label> (default)
 format = <label>
 format-padding = 1
-format-foreground = ${color.foreground-alt}
-
+format-foreground = ${color.foreground}
 ; Available tokens:
 ;   %title%
 ; Default: %title%
 label = " %title%"
-label-maxlen = 30
+label-maxlen = 50
 
 ; Used instead of label when there is no window title
 label-empty = " Desktop"
@@ -60,6 +60,7 @@ label-empty = " Desktop"
 type = internal/backlight
 card = amdgpu_bl0
 format = <ramp> <label>
+format-background = ${colors.background}
 format-padding = 2
 label = %percentage%%
 ramp-0 = " "
@@ -129,6 +130,7 @@ interval = 2
 format-prefix = " "
 format-padding = 2
 format-foreground = ${colors.foreground}
+format-background = ${colors.background}
 label = %percentage%%
 
 [module/memory]
@@ -178,11 +180,11 @@ type = custom/menu
 expand-right = true
 label-open = 
 label-open-foreground = ${colors.foreground}
-label-open-background = "#5E81AC"
+label-open-background = ${colors.powermenu}
 label-open-padding = 3
 label-close = 
 label-close-foreground = ${colors.foreground}
-label-close-background = "#5E81AC"
+label-close-background = ${colors.powermenu}
 label-close-padding = 3
 
 menu-0-0 = 
@@ -207,11 +209,11 @@ type = internal/battery
 full-at = ${config.battery-full-at}
 battery = ${config.battery-bat}
 adapter = ${config.battery-adp}
-content-padding= 4
 
-format-padding = 4
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = ${colors.background}
+format-charging-padding = 1
+format-charging-background = ${colors.background}
 animation-charging-0 = "  "
 animation-charging-1 = "  "
 animation-charging-2 = "  "
@@ -220,6 +222,8 @@ animation-charging-4 = "  "
 animation-charging-framerate = 750
 
 format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-background = ${colors.background}
+format-discharging-padding = 1
 format-discharging-underline = ${colors.background}
 ramp-capacity-0 = "  "
 ramp-capacity-1 = "  "

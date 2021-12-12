@@ -7,7 +7,7 @@ dunst &
 
 # composting and wallpaper
 picom &
-feh --bg-fill /home/rv/Downloads/wallpaper8.jpg
+feh --bg-fill ~/Pictures/wallpaper13.jpg
 /usr/lib/polkit-kde-authentication-agent-1 &
 
 # wi-fi
@@ -16,7 +16,7 @@ nm-applet &
 redshift -P -O 4500
 brightnessctl set 65
 
-bspc monitor -d I II III IV V
+bspc monitor -d I II III IV V VI VII
 
 bspc config border_width         3
 bspc config window_gap          7
