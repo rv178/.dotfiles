@@ -1,7 +1,7 @@
 [colors]
 ;background = ${xrdb:background:#ff4242}
-background = ${xrdb:background:#aa282C34}
-foreground = ${xrdb:color7:#ffffff}
+background = ${xrdb:background:#3B4252}
+foreground = ${xrdb:color7:#D8DEE9}
 
 ;  _                    
 ; | |__   __ _ _ __ ___ 
@@ -11,9 +11,9 @@ foreground = ${xrdb:color7:#ffffff}
 
 [bar/bar]
 enable-ipc=true
-height = 35
+height = 32
 width = 100%
-bottom = true
+bottom = false
 font-0 =Jetbrains Mono Nerd Font:size=9.5;3
 offset-x = 0
 offset-y = 0
@@ -25,9 +25,9 @@ foreground = ${colors.foreground}
 tray-position=right
 line-size = 2
 padding=0
-modules-left = powermenu cpu memory
-modules-center = bspwm
-modules-right = battery backlight pulseaudio time
+modules-left = powermenu bspwm
+modules-center = title
+modules-right = battery backlight pulseaudio cpu time
 scroll-up = bspwn-wsnext 
 scroll-down = bspwn-wsprev
 override-redirect = false
@@ -38,6 +38,24 @@ wm-restack = bspwm
 ; | | | | | | (_) | (_| | |_| | |  __/\__ \
 ; |_| |_| |_|\___/ \__,_|\__,_|_|\___||___/
                                          
+[module/title]
+type = internal/xwindow
+
+; Available tags:
+;   <label> (default)
+format = <label>
+format-padding = 1
+format-foreground = ${color.foreground-alt}
+
+; Available tokens:
+;   %title%
+; Default: %title%
+label = " %title%"
+label-maxlen = 30
+
+; Used instead of label when there is no window title
+label-empty = " Desktop"
+
 [module/backlight]
 type = internal/backlight
 card = amdgpu_bl0
@@ -60,13 +78,16 @@ enable-click = true
 reverse-scroll = true
 
 label-focused = 
+; label-focused = %index%
 label-focused-underline = ${colors.foreground}
 label-focused-padding = 2
 
 label-occupied = 
+; label-occupied = %index%
 label-occupied-padding = 2
 
 label-empty = 
+; label-empty = %index%
 label-empty-padding = 2
 
 label-urgent = 𥉉
@@ -126,7 +147,7 @@ format-margin = 0
 time = "%H:%M"
 date = "%d %b"
 
-label = %date%, %time%
+label = %date% | %time%
 label-foreground = ${colors.foreground}
 label-background = ${colors.background}
 label-padding = 1
@@ -157,11 +178,11 @@ type = custom/menu
 expand-right = true
 label-open = 
 label-open-foreground = ${colors.foreground}
-; label-open-background = "#5E81AC"
+label-open-background = "#5E81AC"
 label-open-padding = 3
 label-close = 
 label-close-foreground = ${colors.foreground}
-; label-close-background = "#5E81AC"
+label-close-background = "#5E81AC"
 label-close-padding = 3
 
 menu-0-0 = 
