@@ -2,8 +2,8 @@
 ;background = ${xrdb:background:#ff4242}
 background = ${xrdb:background:#3B4252}
 foreground = ${xrdb:color7:#D8DEE9}
-powermenu = ${xrdb:color7:#4C566A}
-
+powermenu = ${xrdb:color7:#2E3440}
+focusbg = ${xrdb:color7:#5b667c}
 ;  _                    
 ; | |__   __ _ _ __ ___ 
 ; | '_ \ / _` | '__/ __|
@@ -79,6 +79,7 @@ enable-click = true
 reverse-scroll = true
 
 label-focused = 
+label-focused-background = ${colors.focusbg}
 ; label-focused = %index%
 label-focused-underline = ${colors.foreground}
 label-focused-padding = 2
@@ -146,10 +147,10 @@ label = " %mb_used%"
 type = internal/date
 interval = 1
 format-margin = 0
-time = "%H:%M"
-date = "%d %b"
+time = " %H:%M"
+; date = "%d %b"
 
-label = %date% | %time%
+label = %time%
 label-foreground = ${colors.foreground}
 label-background = ${colors.background}
 label-padding = 1
