@@ -79,7 +79,6 @@ enable-click = true
 reverse-scroll = true
 
 label-focused = 
-label-focused-background = ${colors.focusbg}
 ; label-focused = %index%
 label-focused-underline = ${colors.foreground}
 label-focused-padding = 2
