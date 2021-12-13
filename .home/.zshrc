@@ -26,8 +26,10 @@ alias polycfg='nvim ~/.config/polybar/config'
 alias picomcfg='nvim ~/.config/picom/picom.conf'
 alias zshrc='nvim ~/.zshrc'
 
+alias qsession='pkill -KILL -u $USER'
 alias q='exit'
 alias l='exa -lahF --color=always --icons --sort=size --group-directories-first'
+alias list='exa -lhF --color=always --icons --sort=size --group-directories-first'
 alias c='clear'
 alias loadnvm='export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
