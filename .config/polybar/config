@@ -28,7 +28,7 @@ line-size = 2
 padding=0
 modules-left = powermenu bspwm
 modules-center = title
-modules-right = backlight battery pulseaudio cpu time
+modules-right = battery backlight pulseaudio cpu time
 scroll-up = bspwn-wsnext 
 scroll-down = bspwn-wsprev
 override-redirect = false
@@ -233,7 +233,7 @@ ramp-capacity-4 = "  "
 ramp-capacity-foreground = ${colors.foreground}
 
 label-full = "  100%"
-label-full-foreground = "#FFFFFF"
+label-full-foreground = ${colors.foreground}
 label-full-underline = ${colors.background}
 
 [settings]
