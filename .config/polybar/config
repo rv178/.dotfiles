@@ -2,7 +2,7 @@
 ;background = ${xrdb:background:#ff4242}
 background = ${xrdb:background:#3B4252}
 foreground = ${xrdb:color7:#D8DEE9}
-powermenu = ${xrdb:color7:#2E3440}
+powermenu = ${xrdb:color7:#4C566A}
 focusbg = ${xrdb:color7:#5b667c}
 ;  _                    
 ; | |__   __ _ _ __ ___ 
