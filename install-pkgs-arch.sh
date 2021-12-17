@@ -44,7 +44,7 @@ sudo pacman -S ttf-jetbrains-mono
 # Install pkgs from the AUR
 sudo aura -Acax --noconfirm --needed brave-bin
 sudo aura -Acax --noconfirm --needed montserrat-ttf
-sudo aura -Acax --noconfirm --needed polybar
+sudo aura -Acax --noconfirm --needed polybar-dwm-module
 
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
