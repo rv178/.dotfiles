@@ -9,6 +9,11 @@ cd xelph-st-git/opt/xelph-st-git
 sudo aura -S --noconfirm --needed cmake
 sudo make clean install
 
+# Install my DWM fork
+# git clone https://github.com/idlidev/dwm
+# cd dwm
+# sudo make clean install
+
 # Add chaotic AUR support (optional)
 
 # sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
