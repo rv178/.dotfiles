@@ -1,1 +1,2 @@
-@theme "~/.local/share/rofi/themes/rounded-gray-dark.rasi"
+//@theme "~/.local/share/rofi/themes/rounded-gray-dark.rasi"
+@theme "/home/rv/.local/share/rofi/themes/nord.rasi"
