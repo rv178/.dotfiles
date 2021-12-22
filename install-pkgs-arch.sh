@@ -60,8 +60,9 @@ sudo pacman -S --noconfirm --needed zsh
 sudo pacman -S --noconfirm --needed polkit-kde-agent
 sudo pacman -S --noconfirm --needed feh
 sudo pacman -S --noconfirm --needed exa
-sudo pacman -S ttf-jetbrains-mono
-sudo pacman -S yajl
+sudo pacman -S --noconfirm --needed ttf-jetbrains-mono
+sudo pacman -S --noconfirm --needed yajl
+sudo pacman -S --noconfirm --needed dunst
 
 # Install pkgs from the AUR
 sudo aura -Acax --noconfirm --needed libxft-bgra
