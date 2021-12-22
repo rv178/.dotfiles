@@ -1,0 +1,36 @@
+# make sxhkd reload its configuration files:
+super + shift + r
+	pkill -USR1 -x sxhkd
+
+# other stuff
+
+super + shift + l
+		betterlockscreen -l blur
+
+super + shift + d
+	discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy
+
+PrtSc
+    spectacle
+
+super + ctrl + n
+  nm-connection-editor
+
+# brightness
+
+XF86MonBrightnessUp
+    brightnessctl set 5%+
+
+XF86MonBrightnessDown
+    brightnessctl set 5%-
+
+# audio settings
+
+XF86AudioRaiseVolume
+	amixer set Master 5%+
+
+XF86AudioLowerVolume
+	amixer set Master 5%-
+
+XF86AudioMute
+	amixer -D pulse set Master 1+ toggle

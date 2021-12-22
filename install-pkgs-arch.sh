@@ -1,13 +1,32 @@
+# Install git
 sudo pacman -S --noconfirm --needed git 
+
+# Install aura AUR helper
 git clone https://aur.archlinux.org/aura-bin.git /tmp/aura-git-cloned
 cd /tmp/aura-git-cloned/
 makepkg -sfci --noconfirm --needed
+
+read -r -p "Do you want to install DWM or BSPWM [Select (1) for DWM and (2) for BSPWM]? [1 / 2] " response
+if [[ "$response" =~ ^([1])$ ]]
+then
+	git clone https://github.com/idlidev/dwm
+	cd dwm
+	sudo aura -S --noconfirm --needed cmake
+	sudo make clean install
+	cd ~
+
+	echo "[#################[ Installed DWM ]###################]"
+else
+	sudo pacman -S bspwm
+	echo "[#################[ Installed BSPWM ]###################]"
+fi
 
 # Install ST terminal emulator
 git clone https://github.com/idlidev/xelph-st-git
 cd xelph-st-git/opt/xelph-st-git
 sudo aura -S --noconfirm --needed cmake
 sudo make clean install
+cd ~
 
 # Install my DWM fork
 # git clone https://github.com/idlidev/dwm
@@ -29,7 +48,6 @@ sudo pacman -Syu
 
 # Install pkgs
 sudo pacman -S --noconfirm --needed neovim
-sudo pacman -S --noconfirm --needed bspwm
 sudo pacman -S --noconfirm --needed sxhkd
 sudo pacman -S --noconfirm --needed ranger
 sudo pacman -S --noconfirm --needed neofetch
@@ -42,11 +60,12 @@ sudo pacman -S --noconfirm --needed zsh
 sudo pacman -S --noconfirm --needed polkit-kde-agent
 sudo pacman -S --noconfirm --needed feh
 sudo pacman -S --noconfirm --needed exa
-
-sudo pacman -S ttf-nerd-fonts-symbols
 sudo pacman -S ttf-jetbrains-mono
+sudo pacman -S yajl
 
 # Install pkgs from the AUR
+sudo aura -Acax --noconfirm --needed libxft-bgra
+sudo aura -Acax --noconfirm --needed nerd-fonts-jetbrains-mono
 sudo aura -Acax --noconfirm --needed brave-bin
 sudo aura -Acax --noconfirm --needed montserrat-ttf
 sudo aura -Acax --noconfirm --needed polybar-dwm-module
