@@ -11,6 +11,7 @@ if [[ "$response" =~ ^([1])$ ]]
 then
 	git clone https://github.com/idlidev/dwm
 	cd dwm
+	sudo pacman -S --noconfirm --needed yajl
 	sudo aura -S --noconfirm --needed cmake
 	sudo make clean install
 	cd ~
@@ -63,6 +64,7 @@ sudo pacman -S --noconfirm --needed exa
 sudo pacman -S --noconfirm --needed ttf-jetbrains-mono
 sudo pacman -S --noconfirm --needed yajl
 sudo pacman -S --noconfirm --needed dunst
+sudo pacman -S --noconfirm --needed nodejs
 
 # Install pkgs from the AUR
 sudo aura -Acax --noconfirm --needed libxft-bgra
