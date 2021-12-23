@@ -12,7 +12,6 @@ then
 	git clone https://github.com/idlidev/dwm
 	cd dwm
 	sudo pacman -S --noconfirm --needed yajl
-	sudo aura -S --noconfirm --needed cmake
 	sudo make clean install
 	cd ~
 
@@ -25,7 +24,6 @@ fi
 # Install ST terminal emulator
 git clone https://github.com/idlidev/xelph-st-git
 cd xelph-st-git/opt/xelph-st-git
-sudo aura -S --noconfirm --needed cmake
 sudo make clean install
 cd ~
 
