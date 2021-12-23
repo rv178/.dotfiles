@@ -3,11 +3,12 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # The prompt
-export PROMPT="%F{red}%n%f:%F{cyan}%m%f"$'\n'"%F{cyan} %B%30<..<%~%b %F{red}❯❯ "
+# export PROMPT="%F{red}%n%f:%F{cyan}%m%f"$'\n'"%F{cyan}%B%30<..<%~%b %F{red}❯❯ "
+export PROMPT="%F{cyan} %B%30<..<%~%b %F{red}❯❯ "
 # Default editor
 export EDITOR=nvim
 # Path to NVM
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.local/bin:$PATH"
 
 HISTFILE=~/.zsh-history
 HISTSIZE=1000

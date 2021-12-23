@@ -19,6 +19,8 @@ Inspired from [ShinyZenith's dotfiles](https://github.com/shinyzenith/old-xorg-d
 
 ### Setup NeoVim config
 
+Copy `.config/nvim` to `~/.config/nvim`
+
 Install vim-plug from [here](https://github.com/junegunn/vim-plug)
 
 ```sh
