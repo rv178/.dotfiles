@@ -77,7 +77,7 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
 	echo "[#################[ Finished Installing Packages! ]###################]"
 else
-	sudo aura -Acax --noconfirm --needed picom-jonaburg-git
+	sudo aura -Acax --noconfirm --needed picom-ibhagwan-git
 	echo "[#################[ Finished Installing Packages! ]###################]"
 fi
 
