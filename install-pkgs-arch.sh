@@ -9,11 +9,12 @@ makepkg -sfci --noconfirm --needed
 read -r -p "Do you want to install DWM or BSPWM [Select (1) for DWM and (2) for BSPWM]? [1 / 2] " response
 if [[ "$response" =~ ^([1])$ ]]
 then
+	mkdir dotfiles-build
+	cd dotfiles-build
 	git clone https://github.com/idlidev/dwm
 	cd dwm
 	sudo pacman -S --noconfirm --needed yajl
 	sudo make clean install
-	cd ~
 
 	echo "[#################[ Installed DWM ]###################]"
 else
@@ -25,7 +26,7 @@ fi
 git clone https://github.com/idlidev/xelph-st-git
 cd xelph-st-git/opt/xelph-st-git
 sudo make clean install
-cd ~
+cd ~/.dotfiles
 
 # Add chaotic AUR support (optional)
 
