@@ -62,6 +62,7 @@ sudo pacman -S --noconfirm --needed nodejs
 
 # Install pkgs from the AUR
 sudo aura -Acax --noconfirm --needed libxft-bgra
+sudo aura -Acax --noconfirm --needed betterlockscreen
 sudo aura -Acax --noconfirm --needed nerd-fonts-jetbrains-mono
 sudo aura -Acax --noconfirm --needed brave-bin
 sudo aura -Acax --noconfirm --needed montserrat-ttf
