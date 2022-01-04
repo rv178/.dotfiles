@@ -27,8 +27,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 let mapleader=" "
-nnoremap / /\v
-vnoremap / /\v
 autocmd BufWritePost *.tex silent! !pdflatex %
 "make a compile script for groff documents and complie on save
 nnoremap Y y$
