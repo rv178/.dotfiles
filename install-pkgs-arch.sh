@@ -1,3 +1,6 @@
+# Synchronize package databases 
+sudo pacman -Syu
+
 # Install git
 sudo pacman -S --noconfirm --needed git 
 
@@ -28,19 +31,6 @@ cd xelph-st-git/opt/xelph-st-git
 sudo make clean install
 cd ~/.dotfiles
 
-# Add chaotic AUR support (optional)
-
-# sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
-# sudo pacman-key --lsign-key 3056513887B78AEB
-
-# sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-
-# sudo echo '[chaotic-aur]' >> /etc/pacman.conf
-# sudo echo 'Include = /etc/pacman.d/chaotic-mirrorlist' >> /etc/pacman.conf
-
-# Synchronize package databases 
-sudo pacman -Syu
-
 # Install pkgs
 sudo pacman -S --noconfirm --needed neovim
 sudo pacman -S --noconfirm --needed sxhkd
@@ -61,12 +51,12 @@ sudo pacman -S --noconfirm --needed dunst
 sudo pacman -S --noconfirm --needed nodejs
 
 # Install pkgs from the AUR
-sudo aura -Acax --noconfirm --needed libxft-bgra
-sudo aura -Acax --noconfirm --needed betterlockscreen
-sudo aura -Acax --noconfirm --needed nerd-fonts-jetbrains-mono
-sudo aura -Acax --noconfirm --needed brave-bin
-sudo aura -Acax --noconfirm --needed montserrat-ttf
-sudo aura -Acax --noconfirm --needed polybar-dwm-module
+sudo aura -Acax --noconfirm libxft-bgra
+sudo aura -Acax --noconfirm betterlockscreen
+sudo aura -Acax --noconfirm nerd-fonts-jetbrains-mono
+sudo aura -Acax --noconfirm brave-bin
+sudo aura -Acax --noconfirm montserrat-ttf
+sudo aura -Acax --noconfirm polybar-dwm-module
 
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -79,7 +69,7 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
 	echo "[#################[ Finished Installing Packages! ]###################]"
 else
-	sudo aura -Acax --noconfirm --needed picom-ibhagwan-git
+	sudo aura -Acax --noconfirm picom-ibhagwan-git
 	echo "[#################[ Finished Installing Packages! ]###################]"
 fi
 
