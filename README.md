@@ -8,13 +8,12 @@ Copy all files in `~/.dotfiles/.config` to `~/.config`
 
 Copy all files in `~/.dotfiles/.home` to `~`
 
-Install the packages (use the install script if you're lazy like me :P)
+Install the packages using the install script:
 
 `chmod +x ~/.dotfiles/install-pkgs-arch.sh`
 
 `~/.dotfiles/install-pkgs-arch.sh`
 
-Coming soon! :)
 Inspired from [ShinyZenith's dotfiles](https://github.com/shinyzenith/old-xorg-dotfiles)
 
 ### Setup NeoVim config
