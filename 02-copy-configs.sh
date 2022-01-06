@@ -4,18 +4,28 @@ Whi='\e[0;37m';
 
 echo -e "[${Gre}*${Whi}] Setting up config files"
 
-echo -e "➞ [${Red}*${Whi}] Removing existing directories"
+echo -e "➞ [${Red}*${Whi}] Removing ~/dotfiles-backup for backing up current configs"
+
+rm -rf ~/dotfiles-backup
+
+echo -e "➞ [${Gre}*${Whi}] Backing up existing directories"
+
+mkdir -p ~/dotfilesq-backup
+mkdir -p ~/dotfiles-backup/config
+mkdir -p ~/dotfiles-backup/home
 
 cd ~/.dotfiles
 for dir in $(find .config -maxdepth 1 -mindepth 1 | awk -F "/" '{print $NF}')
 do
-	rm -rf ~/.config/$dir
+	mv ~/.config/$dir ~/dotfiles-backup/config
 done
 
 for dir in $(find .home -mindepth 1 -maxdepth 1 | awk -F "/" '{print $NF}')
 do
-	rm -rf ~/$dir
+	mv ~/$dir ~/dotfiles-backup/home
 done
+
+echo -e "➞ [${Gre}*${Whi}] Backups saved in ~/dotfiles-backup"
 
 echo -e "➞ [${Gre}*${Whi}] Copying directories in .config"
 
