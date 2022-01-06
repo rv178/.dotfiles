@@ -83,8 +83,15 @@ mkdir -p ~/.zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 
+
 # Change shell for root
+echo -e "[${Red}*${Whi}] Changing shell for user"
 sudo chsh -s /usr/bin/zsh
+
+echo -e "[${Gre}*${Whi}] Cloning GTK theme and icons"
+
+sudo git clone https://codeberg.org/tplasdio/numigsur-icon-theme.git /usr/share/icons/numigsur-icon-theme
+sudo git clone https://github.com/EliverLara/Nordic /usr/share/themes/Nordic
 
 read -r -p "Are you installing this on a virtual machine? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
@@ -96,7 +103,3 @@ else
 	echo -e "[${Gre}*${Whi}] Installation has finished!"
 fi
 
-echo -e "[${Gre}*${Whi}] Cloning GTK theme and icons"
-
-sudo git clone https://codeberg.org/tplasdio/numigsur-icon-theme.git /usr/share/icons/numigsur-icon-theme
-sudo git clone https://github.com/EliverLara/Nordic /usr/share/themes/Nordic
