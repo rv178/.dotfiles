@@ -77,7 +77,7 @@ sudo aura -Acax --noconfirm polybar-dwm-module
 echo -e "[${Gre}+${Whi}] Installing vim-plug"
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-echo -e "[${Gre}*${Whi}] Setting up ZSH"
+echo -e "[${Gre}*${Whi}] Setting up ZSH plugins"
 
 mkdir -p ~/.zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
@@ -96,3 +96,7 @@ else
 	echo -e "[${Gre}*${Whi}] Installation has finished!"
 fi
 
+echo -e "[${Gre}*${Whi}] Cloning GTK theme and icons"
+
+sudo git clone https://codeberg.org/tplasdio/numigsur-icon-theme.git /usr/share/icons/numigsur-icon-theme
+sudo git clone https://github.com/EliverLara/Nordic /usr/share/themes/Nordic
