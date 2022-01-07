@@ -10,7 +10,7 @@ rm -rf ~/dotfiles-backup
 
 echo -e "➞ [${Gre}*${Whi}] Backing up existing directories"
 
-mkdir -p ~/dotfilesq-backup
+mkdir -p ~/dotfiles-backup
 mkdir -p ~/dotfiles-backup/config
 mkdir -p ~/dotfiles-backup/home
 
