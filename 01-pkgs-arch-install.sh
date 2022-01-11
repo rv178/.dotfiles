@@ -26,7 +26,7 @@ then
 	mkdir dotfiles-build
 	cd dotfiles-build
 	git clone https://github.com/idlidev/dwm
-	cd dwm
+	cd dwm/dwm
 	sudo pacman -S --noconfirm --needed yajl
 	sudo make clean install
 
