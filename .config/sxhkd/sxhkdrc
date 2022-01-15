@@ -16,7 +16,7 @@ super + shift + r
 super + shift + e
     bspc wm -r
 
-super + l
+super + shift + l
 		betterlockscreen -l blur
 
 super + shift + d
@@ -80,21 +80,6 @@ super + {t,shift + t,s,f}
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
-#
-# focus/swap
-# Focus next/previous window
-ctrl + alt + Left
-	bspc node --focus west
-
-ctrl + alt + Right
-	bspc node --focus east
-
-ctrl + alt + Up
-	bspc node --focus north
-
-ctrl + alt + Down
-	bspc node --focus south
-
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
@@ -155,9 +140,9 @@ super + {Left,Down,Up,Right}
 
 
 # expand a window by moving one of its side outward
-super + alt + {Left,Down,Up, Right}
-	bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 10 0}
+super + shift + {Right, Down}
+	bspc node -z {right 10 0,bottom 0 10}
 
 # contract a window by moving one of its side inward
-super + alt + shift + {Left, Down, Up, Right}
-	bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
+super + shift + {Left, Up}
+	bspc node -z {right -10 0, bottom 0 -10}
