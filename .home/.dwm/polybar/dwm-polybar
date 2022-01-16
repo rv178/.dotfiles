@@ -6,6 +6,7 @@ powermenu = ${xrdb:color7:#4C566A}
 active = ${xrdb:color7:#88C0D0}
 inactive = ${xrdb:color7:#A3BE8C}
 empty = ${xrdb:color7:#69748c}
+
 ;  _                    
 ; | |__   __ _ _ __ ___ 
 ; | '_ \ / _` | '__/ __|

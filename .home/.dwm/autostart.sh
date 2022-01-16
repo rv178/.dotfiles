@@ -12,4 +12,9 @@ nm-applet &
 /usr/lib/polkit-kde-authentication-agent-1 &
 
 sxhkd -c ~/.dwm/sxhkd/sxhkdrc &
+
+~/.dwm/scripts/updates.sh &
+# ~/.dwm/bar/bar.sh &
+
+
 dwm

@@ -1,11 +1,11 @@
 [colors]
-;background = ${xrdb:background:#ff4242}
-background = ${xrdb:background:#3B4252}
-foreground = ${xrdb:color7:#D8DEE9}
-powermenu = ${xrdb:color7:#4C566A}
-active = ${xrdb:color7:#88C0D0}
-inactive = ${xrdb:color7:#A3BE8C}
-empty = ${xrdb:color7:#69748c}
+;background = #ff4242
+background = #3B4252
+foreground = #D8DEE9
+powermenu = #4C566A
+active = #88C0D0
+inactive = #A3BE8C
+empty = #69748c 
 ;  _                    
 ; | |__   __ _ _ __ ___ 
 ; | '_ \ / _` | '__/ __|
