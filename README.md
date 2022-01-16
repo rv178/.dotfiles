@@ -36,7 +36,6 @@ Open NeoVim and do `:PlugInstall`
 #### DWM
 
 ![Alt text](./.assets/screenshots/ss2.png "Screenshot 1")
-![Alt text](./.assets/screenshots/ss3.png "Screenshot 2")
 
 #### BSPWM
 
@@ -44,4 +43,4 @@ Open NeoVim and do `:PlugInstall`
 
 #### NeoVim
 
-![Alt text](./.assets/screenshots/ss4.png "Screenshot 1")
+![Alt text](./.assets/screenshots/ss3.png "Screenshot 1")
