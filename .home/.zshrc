@@ -5,6 +5,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # The prompt
 export PROMPT="%F{red}%n%f:%F{cyan}%m%f"$'\n'"%F{cyan} %B%30<..<%~%b %F{red}❯❯ "
 # export PROMPT="%F{cyan} %B%30<..<%~%b %F{red}❯❯ "
+~/.dwm/scripts/colors/zwaves
 
 # Default editor
 export EDITOR=nvim
@@ -35,6 +36,8 @@ alias list='exa -lhF --color=always --icons --sort=size --group-directories-firs
 alias c='clear'
 alias loadnvm='export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
+alias vclipc='xsel -ob'
+
 # Load on startup
 _startup() {
   # Beam shape cursor
