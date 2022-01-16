@@ -60,6 +60,7 @@ sudo pacman -S --noconfirm --needed polkit-kde-agent
 sudo pacman -S --noconfirm --needed feh
 sudo pacman -S --noconfirm --needed exa
 sudo pacman -S --noconfirm --needed ttf-jetbrains-mono
+sudo pacman -S --noconfirm --needed lxappearance
 sudo pacman -S --noconfirm --needed yajl
 sudo pacman -S --noconfirm --needed dunst
 sudo pacman -S --noconfirm --needed nodejs
