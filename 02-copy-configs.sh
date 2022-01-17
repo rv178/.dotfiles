@@ -38,4 +38,4 @@ cd ~/.dotfiles/.home
 cp -r .zshrc ~
 cp -r .dwm ~
 
-echo -e "[${Gre}*${Whi}] Finished setting up configs"
+echo -e "[${Gre}*${Whi}] Finished setting up configs!"
