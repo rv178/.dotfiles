@@ -28,6 +28,7 @@ alias sxhkdrc='nvim ~/.config/sxhkd/sxhkdrc'
 alias polycfg='nvim ~/.config/polybar/config'
 alias picomcfg='nvim ~/.config/picom/picom.conf'
 alias zshrc='nvim ~/.zshrc'
+alias nvimrc='nvim ~/.config/nvim/init.vim'
 
 alias qsession='pkill -KILL -u $USER'
 alias q='exit'

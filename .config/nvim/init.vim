@@ -1,6 +1,5 @@
 syntax on
 call plug#begin('~/.vim/plugged')
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'kassio/neoterm'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'SirVer/ultisnips'
