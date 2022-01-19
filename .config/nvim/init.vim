@@ -2,8 +2,8 @@ syntax on
 call plug#begin('~/.vim/plugged')
 Plug 'kassio/neoterm'
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'SirVer/ultisnips'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'turbio/bracey.vim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'honza/vim-snippets'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -14,7 +14,6 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'arcticicestudio/nord-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'vim-airline/vim-airline'
@@ -26,7 +25,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 let mapleader=" "
-autocmd BufWritePost *.tex silent! !pdflatex %
 "make a compile script for groff documents and complie on save
 nnoremap Y y$
 nnoremap Q <Nop>
@@ -84,12 +82,6 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Clean'     :'✔︎',
                 \ 'Unknown'   :'?',
                 \ }
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips']
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
 let g:prettier#quickfix_enabled = 0
 let g:prettier#quickfix_auto_focus = 0
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
@@ -235,4 +227,4 @@ nnoremap <esc> :noh<CR>
 set mouse=a
 set window title
 set title
-set ttyfast
+"set ttyfast
