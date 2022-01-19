@@ -59,6 +59,7 @@ sudo pacman -S --noconfirm --needed zsh
 sudo pacman -S --noconfirm --needed polkit-kde-agent
 sudo pacman -S --noconfirm --needed feh
 sudo pacman -S --noconfirm --needed exa
+sudo pacman -S --noconfirm --needed bat
 sudo pacman -S --noconfirm --needed ttf-jetbrains-mono
 sudo pacman -S --noconfirm --needed lxappearance
 sudo pacman -S --noconfirm --needed yajl
