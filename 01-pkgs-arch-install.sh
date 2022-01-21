@@ -26,9 +26,9 @@ then
 	mkdir dotfiles-build
 	cd dotfiles-build
 	git clone https://github.com/idlidev/dwm
-	cd dwm/dwm
+	cd dwm
 	sudo pacman -S --noconfirm --needed yajl
-	sudo make clean install
+	make poly
 
 	echo -e "${Whi}[${Gre}*${Whi}] Installed DWM"
 else
