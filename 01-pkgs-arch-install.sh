@@ -65,6 +65,7 @@ sudo pacman -S --noconfirm --needed lxappearance
 sudo pacman -S --noconfirm --needed yajl
 sudo pacman -S --noconfirm --needed dunst
 sudo pacman -S --noconfirm --needed nodejs
+sudo pacman -S --noconfirm --needed stow
 
 # Install pkgs from the AUR
 echo -e "[${Cya}+${Whi}] Installing AUR packages"
@@ -85,7 +86,6 @@ mkdir -p ~/.zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 
-
 # Change shell for root
 echo -e "[${Red}*${Whi}] Changing shell for user"
 sudo chsh -s /usr/bin/zsh
@@ -105,41 +105,5 @@ else
 	echo -e "[${Gre}*${Whi}] Installation has finished!"
 fi
 
-echo -e "[${Gre}*${Whi}] Setting up config files"
-
-echo -e "➞ [${Red}*${Whi}] Removing ~/dotfiles-backup for backing up current configs"
-
-rm -rf ~/dotfiles-backup
-
-echo -e "➞ [${Gre}*${Whi}] Backing up existing directories"
-
-mkdir -p ~/dotfiles-backup
-mkdir -p ~/dotfiles-backup/config
-mkdir -p ~/dotfiles-backup/home
-
-cd ~/.dotfiles
-for dir in $(find .config -maxdepth 1 -mindepth 1 | awk -F "/" '{print $NF}')
-do
-	mv ~/.config/$dir ~/dotfiles-backup/config
-done
-
-for dir in $(find .home -mindepth 1 -maxdepth 1 | awk -F "/" '{print $NF}')
-do
-	mv ~/$dir ~/dotfiles-backup/home
-done
-
-echo -e "➞ [${Gre}*${Whi}] Backups saved in ~/dotfiles-backup"
-
-echo -e "➞ [${Gre}*${Whi}] Copying directories in .config"
-
-cd ~/.dotfiles/.config
-cp -r * ~/.config
-
-echo -e "➞ [${Gre}*${Whi}] Copying directories in .home"
-
-cd ~/.dotfiles/.home
-cp -r .zshrc ~
-cp -r .dwm ~
-
-echo -e "[${Gre}*${Whi}] Finished setting up configs"
-
+chmod +x ./03-symlink-configs.sh
+./03-symlink-configs.sh
