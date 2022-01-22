@@ -9,7 +9,7 @@ nm-applet &
 ~/.fehbg
 ~/.dwm/polybar/launch.sh &
 
-/usr/lib/polkit-kde-authentication-agent-1 &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 sxhkd -c ~/.dwm/sxhkd/sxhkdrc &
 

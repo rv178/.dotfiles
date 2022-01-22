@@ -56,7 +56,7 @@ sudo pacman -S --noconfirm --needed rofi
 sudo pacman -S --noconfirm --needed brightnessctl
 sudo pacman -S --noconfirm --needed redshift
 sudo pacman -S --noconfirm --needed zsh
-sudo pacman -S --noconfirm --needed polkit-kde-agent
+sudo pacman -S --noconfirm --needed polkit-gnome
 sudo pacman -S --noconfirm --needed feh
 sudo pacman -S --noconfirm --needed exa
 sudo pacman -S --noconfirm --needed bat
