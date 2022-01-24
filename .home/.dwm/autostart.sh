@@ -13,7 +13,7 @@ nm-applet &
 
 sxhkd -c ~/.dwm/sxhkd/sxhkdrc &
 
-~/.dwm/scripts/updates.sh &
+~/.dwm/scripts/updates.sh 
 # ~/.dwm/bar/bar.sh &
 
 

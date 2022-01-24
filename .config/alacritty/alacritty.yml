@@ -1,4 +1,4 @@
-background_opacity: 1.00
+window.opacity: 1.00
 
 window:
   padding:
