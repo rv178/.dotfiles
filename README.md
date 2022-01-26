@@ -4,15 +4,16 @@ Clone this repo to `~/.dotfiles`: `git clone https://github.com/idlidev/.dotfile
 
 ### Setup
 
-Copy all files in `~/.dotfiles/.config` to `~/.config`
+`chmod +x ~/.dotfiles/*.sh`
 
-Copy all files in `~/.dotfiles/.home` to `~`
+Install packages and symlink configs:
+`~/.dotfiles/01-install-pkgs-arch.sh`
 
-Install the packages using the install script:
+Copy configs:
+`~/.dotfiles/02-copy-configs.sh`
 
-`chmod +x ~/.dotfiles/install-pkgs-arch.sh`
-
-`~/.dotfiles/install-pkgs-arch.sh`
+Symlink configs (requires stow):
+`~/.dotfiles/03-symlink-configs.sh`
 
 Inspired from [ShinyZenith's dotfiles](https://github.com/shinyzenith/old-xorg-dotfiles)
 
