@@ -1,13 +1,10 @@
 <p align=center>
   <img src="./.assets/dotfiles.png" alt=dotfiles width=60%>
-  <p align=center>
-	My Dotfiles
-  </p>
 </p>
 
-Clone this repo to `~/.dotfiles`: `git clone https://github.com/idlidev/.dotfiles ~/.dotfiles`
-
 ### Setup
+
+Clone this repo to `~/.dotfiles`: `git clone https://github.com/idlidev/.dotfiles ~/.dotfiles`
 
 `chmod +x ~/.dotfiles/*.sh`
 
