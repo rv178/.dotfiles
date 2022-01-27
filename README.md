@@ -12,20 +12,17 @@ Inspired from [ShinyZenith's dotfiles](https://github.com/shinyzenith/old-xorg-d
 
 ### Screenshots
 
-<details>
-<summary>DWM</summary>
-<br>
-![Alt text](./.assets/screenshots/ss2.png "Screenshot 1")
+<details><summary>DWM</summary>
+
+![Alt text](./.assets/screenshots/ss2.png)
 </details>
 
-<details>
-<summary>BSPWM</summary>
-<br>
-![Alt text](./.assets/screenshots/ss1.png "Screenshot 2")
+<details><summary>BSPWM</summary>
+
+![Alt text](./.assets/screenshots/ss1.png)
 </details>
 
-<details>
-<summary>NeoVim</summary>
-<br>
-![Alt text](./.assets/screenshots/ss3.png "Screenshot 3")
+<details><summary>NeoVim</summary>
+
+![Alt text](./.assets/screenshots/ss3.png)
 </details>
