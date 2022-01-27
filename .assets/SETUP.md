@@ -5,7 +5,7 @@ Clone this repo to `~/.dotfiles`: `git clone https://github.com/idlidev/.dotfile
 `chmod +x ~/.dotfiles/*.sh`
 
 Install packages and symlink configs:
-`~/.dotfiles/01-install-pkgs-arch.sh`
+`~/.dotfiles/01-pkgs-arch-install.sh`
 
 Copy configs:
 `~/.dotfiles/02-copy-configs.sh`
