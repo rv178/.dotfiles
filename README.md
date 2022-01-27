@@ -6,23 +6,28 @@
 </p>
 </p>
 
-For setting up, see [SETUP.md](./.assets/SETUP.md)
+### Setup
 
-Inspired from [ShinyZenith's dotfiles](https://github.com/shinyzenith/old-xorg-dotfiles)
+For setting up, see [SETUP.md](./.assets/SETUP.md)
 
 ### Screenshots
 
 <details><summary>DWM</summary>
 
 ![Alt text](./.assets/screenshots/ss2.png)
+
 </details>
 
 <details><summary>BSPWM</summary>
 
 ![Alt text](./.assets/screenshots/ss1.png)
+
 </details>
 
 <details><summary>NeoVim</summary>
 
 ![Alt text](./.assets/screenshots/ss3.png)
+
 </details>
+
+Inspired from [ShinyZenith's dotfiles](https://github.com/shinyzenith/old-xorg-dotfiles)
