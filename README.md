@@ -5,6 +5,7 @@
   <img src="https://img.shields.io/github/stars/idlidev/.dotfiles?style=flat-square">
 </p>
 </p>
+<hr />
 
 ### Setup
 
