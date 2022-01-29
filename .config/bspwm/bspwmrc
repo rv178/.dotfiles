@@ -1,12 +1,12 @@
 #! /bin/sh
 
-sxhkd &
+sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 dunst &
 # polybar
-~/.config/polybar/launch.sh &
+~/.config/bspwm/polybar/launch.sh &
 
 # composting and wallpaper
-picom &
+picom --config ~/.config/bspwm/picom/picom.conf &
 ~/.fehbg
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
