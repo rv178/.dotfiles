@@ -33,4 +33,4 @@ For setting up, see [SETUP.md](./.assets/SETUP.md)
 
 If you come across any issue, open an issue in this repo [here](https://github.com/Idlidev/.dotfiles/issues/new).
 
-Inspired from [ShinyZenith's dotfiles](https://github.com/shinyzenith/old-xorg-dotfiles)
+Inspired from ShinyZenith's [dotfiles](https://github.com/shinyzenith/old-xorg-dotfiles).
