@@ -1,4 +1,4 @@
-# eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -25,10 +25,6 @@ setopt autocd
 # compinit
 
 # Aliases
-alias bspwmrc='nvim ~/.config/bspwm/bspwmrc'
-alias sxhkdrc='nvim ~/.config/sxhkd/sxhkdrc'
-alias polycfg='nvim ~/.config/polybar/config'
-alias picomcfg='nvim ~/.config/picom/picom.conf'
 alias zshrc='nvim ~/.zshrc'
 alias nvimrc='nvim ~/.config/nvim/init.vim'
 
