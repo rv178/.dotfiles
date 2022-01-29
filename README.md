@@ -2,7 +2,7 @@
   <img src="./.assets/dotfiles.png" alt=dotfiles width=60%>
   <p align=center>
   <img src="https://img.shields.io/github/issues/idlidev/.dotfiles?style=flat-square">
-  <img src="https://img.shields.io/badge/Maintained-Yes-green">
+  <img src="https://img.shields.io/github/stars/idlidev/.dotfiles?style=flat-square">
 </p>
 </p>
 
