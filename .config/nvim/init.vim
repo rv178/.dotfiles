@@ -1,13 +1,11 @@
 syntax on
 call plug#begin('~/.vim/plugged')
-Plug 'kassio/neoterm'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'turbio/bracey.vim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'honza/vim-snippets'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'psliwka/vim-smoothie'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -25,7 +23,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 let mapleader=" "
-"make a compile script for groff documents and complie on save
 nnoremap Y y$
 nnoremap Q <Nop>
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
@@ -61,10 +58,13 @@ nmap <C-n> :NERDTreeToggle<CR>
 vmap cc <Plug>NERDCommenterToggle
 nmap cc <Plug>NERDCommenterToggle
 set scrolloff=999
+
+" airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts=1
+"let g:airline_powerline_fonts=1
 let g:airline_theme = 'nord'
-let g:smoothe_enabled = 1
+let g:airline_section_z = airline#section#create(['windowswap', 'obsession', 'linenr', 'maxlinenr'])
+
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:NERDTreeGitStatusUseNerdFonts = 1
 let g:NERDTreeGitStatusShowIgnored = 1
@@ -125,8 +125,6 @@ let g:coc_global_extensions = [
   "\ 'coc-go',
   \ 'coc-discord-rpc',
   \ 'coc-pairs',
-  \ 'coc-tsserver',
-  \ 'coc-eslint', 
   \ 'coc-prettier', 
   \ 'coc-json', 
   "\ 'coc-pyright'
@@ -200,12 +198,6 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-
-let g:neoterm_default_mod='belowright' " open terminal in bottom split
-let g:neoterm_size=16 " terminal split size
-let g:neoterm_autoscroll=1 " scroll to the bottom when running a command
-nnoremap <leader><cr> :TREPLSendLine<cr>j " send current line and move down
-vnoremap <leader><cr> :TREPLSendSelection<cr> " send current selection
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')

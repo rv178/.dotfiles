@@ -27,7 +27,11 @@ setopt autocd
 # Aliases
 alias zshrc='nvim ~/.zshrc'
 alias nvimrc='nvim ~/.config/nvim/init.vim'
-
+alias bspwmrc='nvim ~/.config/bspwm/bspwmrc'
+alias sxhkdrc='nvim ~/.config/bspwm/sxhkd/sxhkdrc'
+alias polycfg='nvim ~/.config/bspwm/polybar/config'
+alias dunstrc='nvim ~/.config/dunst/dunstrc'
+alias record='ffmpeg -video_size 1366x768 -framerate 60 -f x11grab -i :0 out.mp4'
 alias qsession='pkill -KILL -u $USER'
 alias q='exit'
 alias cat='bat --theme Nord'
