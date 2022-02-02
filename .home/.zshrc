@@ -27,10 +27,6 @@ setopt autocd
 # Aliases
 alias zshrc='nvim ~/.zshrc'
 alias nvimrc='nvim ~/.config/nvim/init.vim'
-alias bspwmrc='nvim ~/.config/bspwm/bspwmrc'
-alias sxhkdrc='nvim ~/.config/bspwm/sxhkd/sxhkdrc'
-alias polycfg='nvim ~/.config/bspwm/polybar/config'
-alias dunstrc='nvim ~/.config/dunst/dunstrc'
 alias record='ffmpeg -video_size 1366x768 -framerate 60 -f x11grab -i :0 screen-out.mp4'
 alias recordcam='ffmpeg -f v4l2 -framerate 25 -video_size 1366x768 -i /dev/video0 cam-out.mp4'
 alias qsession='pkill -KILL -u $USER'
