@@ -1,6 +1,7 @@
 syntax on
 call plug#begin('~/.vim/plugged')
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'psliwka/vim-smoothie'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'turbio/bracey.vim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -121,6 +122,7 @@ endfunction
 autocmd BufEnter * call SyncTree()
 let g:coc_global_extensions = [
   \ 'coc-snippets',
+  \ 'coc-rls',
   "\ 'coc-java',
   "\ 'coc-go',
   \ 'coc-discord-rpc',
@@ -220,3 +222,5 @@ set mouse=a
 set window title
 set title
 "set ttyfast
+" smoothie
+let g:smoothie_enabled = 1
