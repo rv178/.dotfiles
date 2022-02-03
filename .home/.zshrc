@@ -41,6 +41,7 @@ alias gm='git commit -S'
 alias ga='git add .'
 alias gp='git push'
 alias gpull='git pull'
+alias fnd='fidfile=$(fzf) && nvim $fidfile'
 # Load on startup
 _startup() {
   # Beam shape cursor
