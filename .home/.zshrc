@@ -1,6 +1,4 @@
 #eval "$(starship init zsh)"
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # The prompt
 export PROMPT="%F{red}%n%f:%F{cyan}%m%f"$'\n'"%F{cyan} %B%30<..<%~%b %F{red}❯❯ "
@@ -19,8 +17,15 @@ SAVEHIST=1000000
 setopt autocd
 # zstyle :compinstall filename '~/.zshrc'
 
-# autoload -Uz compinit
-# compinit
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)
+
+# Edit line in vim with ctrl-e:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
 
 # Aliases
 alias zshrc='nvim ~/.zshrc'
@@ -42,6 +47,7 @@ alias ga='git add .'
 alias gp='git push'
 alias gpull='git pull'
 alias fnd='findfile=$(find . | fzf) && nvim $findfile'
+
 # Load on startup
 _startup() {
   # Beam shape cursor
@@ -51,3 +57,7 @@ _startup() {
 }
 
 precmd_functions+=(_startup)
+
+# Source plugins
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
