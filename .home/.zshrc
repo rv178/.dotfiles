@@ -38,7 +38,7 @@ alias loadnvm='export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HO
 alias hst='history 1 -1 | cut -c 8- | sort | uniq | fzf | tr -d '\n' | xclip -sel c'
 alias gst='git status'
 alias gm='git commit -S'
-alias gadd='git add .'
+alias ga='git add .'
 alias gp='git push'
 
 # Load on startup
