@@ -6,7 +6,6 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PROMPT="%F{red}%n%f:%F{cyan}%m%f"$'\n'"%F{cyan} %B%30<..<%~%b %F{red}❯❯ "
 # export PROMPT="%F{cyan} %B%30<..<%~%b %F{red}❯❯ "
 ~/.dwm/scripts/colors/zwaves
-
 # Default editor
 export EDITOR=nvim
 # Path to NVM
@@ -14,11 +13,10 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.
 # Customizing man theme with bat
 export MANPAGER="sh -c 'col -bx | bat --theme Nord -l man -p'"
 
-HISTFILE=~/.zsh-history
-HISTSIZE=1000
-SAVEHIST=1000
+HISTFILE=~/.zsh/.zsh-history
+HISTSIZE=1000000
+SAVEHIST=1000000
 setopt autocd
-
 # zstyle :compinstall filename '~/.zshrc'
 
 # autoload -Uz compinit
@@ -37,6 +35,11 @@ alias ls='ls -lahF --color=always'
 alias c='clear'
 alias loadnvm='export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
+alias hst='history 1 -1 | cut -c 8- | sort | uniq | fzf | tr -d '\n' | xclip -sel c'
+alias gst='git status'
+alias gm='git commit -S'
+alias gadd='git add .'
+alias gp='git push'
 
 # Load on startup
 _startup() {
