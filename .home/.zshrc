@@ -41,7 +41,7 @@ alias gm='git commit -S'
 alias ga='git add .'
 alias gp='git push'
 alias gpull='git pull'
-alias fnd='findfile=$(fzf) && nvim $findfile'
+alias fnd='findfile=$(find . | fzf) && nvim $findfile'
 # Load on startup
 _startup() {
   # Beam shape cursor
