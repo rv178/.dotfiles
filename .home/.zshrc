@@ -40,7 +40,7 @@ alias gst='git status'
 alias gm='git commit -S'
 alias ga='git add .'
 alias gp='git push'
-alias gpull
+alias gpull='git pull'
 # Load on startup
 _startup() {
   # Beam shape cursor
