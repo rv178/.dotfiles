@@ -19,6 +19,15 @@ git clone https://aur.archlinux.org/aura-bin.git /tmp/aura-git-cloned
 cd /tmp/aura-git-cloned/
 makepkg -sfci --noconfirm --needed
 
+# Install pkgs
+echo -e "[${Red}+${Whi}] Installing repo packages"
+for repo_pkg in $(cat ~/.dotfiles/.assets/pkg_list.txt)
+do
+	sudo pacman -S --noconfirm --needed $repo_pkg
+done
+
+# -----
+
 echo -e "[${Yel}*${Whi}] Do you want to install DWM or BSPWM [Select (1) for DWM and (2) for BSPWM]?"
 read -r -p "(1 / 2) -> " response
 if [[ "$response" =~ ^([1])$ ]]
@@ -27,7 +36,6 @@ then
 	cd dotfiles-build
 	git clone https://github.com/idlidev/dwm
 	cd dwm
-	sudo pacman -S --noconfirm --needed yajl
 	make poly
 
 	echo -e "${Whi}[${Gre}*${Whi}] Installed DWM"
@@ -36,46 +44,20 @@ else
 	echo -e "${Whi}[${Gre}*${Whi}] Installed BSPWM"
 fi
 
-echo -e "[${Red}+${Whi}] Installing ST"
 # Install ST terminal emulator
+echo -e "[${Red}+${Whi}] Installing ST"
+
 git clone https://github.com/idlidev/xelph-st-git
 cd xelph-st-git/opt/xelph-st-git
 sudo make clean install
 cd ~/.dotfiles
 
-# Install pkgs
-echo -e "[${Red}+${Whi}] Installing all other packages"
-
-sudo pacman -S --noconfirm --needed neovim
-sudo pacman -S --noconfirm --needed sxhkd
-sudo pacman -S --noconfirm --needed ranger
-sudo pacman -S --noconfirm --needed neofetch
-
-# sudo aura -S --noconfirm --needed discord
-sudo pacman -S --noconfirm --needed rofi
-sudo pacman -S --noconfirm --needed brightnessctl
-sudo pacman -S --noconfirm --needed redshift
-sudo pacman -S --noconfirm --needed zsh
-sudo pacman -S --noconfirm --needed polkit-gnome
-sudo pacman -S --noconfirm --needed feh
-sudo pacman -S --noconfirm --needed exa
-sudo pacman -S --noconfirm --needed bat
-sudo pacman -S --noconfirm --needed ttf-jetbrains-mono
-sudo pacman -S --noconfirm --needed lxappearance
-sudo pacman -S --noconfirm --needed yajl
-sudo pacman -S --noconfirm --needed dunst
-sudo pacman -S --noconfirm --needed nodejs
-sudo pacman -S --noconfirm --needed stow
-
 # Install pkgs from the AUR
 echo -e "[${Cya}+${Whi}] Installing AUR packages"
-
-sudo aura -Acax --noconfirm libxft-bgra
-sudo aura -Acax --noconfirm betterlockscreen
-sudo aura -Acax --noconfirm nerd-fonts-jetbrains-mono
-sudo aura -Acax --noconfirm brave-bin
-sudo aura -Acax --noconfirm montserrat-ttf
-sudo aura -Acax --noconfirm polybar-dwm-module
+for aur_pkg in $(cat ~/.dotfiles/.assets/pkg_list_aur.txt)
+do
+	sudo aura -Acax --noconfirm $aur_pkg
+done
 
 echo -e "[${Gre}+${Whi}] Installing vim-plug"
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
