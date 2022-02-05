@@ -17,11 +17,11 @@ SAVEHIST=1000000
 setopt autocd
 # zstyle :compinstall filename '~/.zshrc'
 
-autoload -Uz compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)
+#autoload -Uz compinit
+#zstyle ':completion:*' menu select
+#zmodload zsh/complist
+#compinit
+#_comp_options+=(globdots)
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
