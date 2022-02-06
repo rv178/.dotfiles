@@ -17,7 +17,7 @@ makepkg -sfci --noconfirm --needed
 
 # Install pkgs
 echo -e "[${Red}+${Whi}] Installing repo packages"
-for repo_pkg in $(cat ~/.dotfiles/.assets/pkg_list.txt)
+for repo_pkg in $(cat ~/.dotfiles/.assets/pkg_lists/pkg_list.txt)
 do
 	sudo pacman -S --noconfirm --needed $repo_pkg
 done
@@ -49,7 +49,7 @@ cd ~/.dotfiles
 
 # Install pkgs from the AUR
 echo -e "[${Cya}+${Whi}] Installing AUR packages"
-for aur_pkg in $(cat ~/.dotfiles/.assets/pkg_list_aur.txt)
+for aur_pkg in $(cat ~/.dotfiles/.assets/pkg_lists/pkg_list_aur.txt)
 do
 	sudo aura -Acax --noconfirm $aur_pkg
 done
