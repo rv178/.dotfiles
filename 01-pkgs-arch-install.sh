@@ -9,10 +9,6 @@ Whi='\e[0;37m';
 echo -e "[${Red}*${Whi}] Updating system.."
 sudo pacman -Syu
 
-# Install git
-echo -e "[${Red}+${Whi}] Installing git"
-sudo pacman -S --noconfirm --needed git 
-
 # Install aura AUR helper
 echo -e "[${Red}+${Whi}] Installing aura"
 git clone https://aur.archlinux.org/aura-bin.git /tmp/aura-git-cloned
@@ -46,7 +42,6 @@ fi
 
 # Install ST terminal emulator
 echo -e "[${Red}+${Whi}] Installing ST"
-
 git clone https://github.com/idlidev/xelph-st-git
 cd xelph-st-git/opt/xelph-st-git
 sudo make clean install
@@ -59,11 +54,12 @@ do
 	sudo aura -Acax --noconfirm $aur_pkg
 done
 
+# Install vim-plug
 echo -e "[${Gre}+${Whi}] Installing vim-plug"
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# Setup ZSH
 echo -e "[${Gre}*${Whi}] Setting up ZSH plugins"
-
 mkdir -p ~/.zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
@@ -72,11 +68,13 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-sy
 echo -e "[${Red}*${Whi}] Changing shell for user"
 sudo chsh -s /usr/bin/zsh
 
+# Clone GTK theme(s) and icons
 echo -e "[${Gre}*${Whi}] Cloning GTK theme and icons"
 
 sudo git clone https://codeberg.org/tplasdio/numigsur-icon-theme.git /usr/share/icons/numigsur-icon-theme
 sudo git clone https://github.com/EliverLara/Nordic /usr/share/themes/Nordic
 
+# Install picom if user is not invoking the script in a vm
 read -r -p "Are you installing this on a virtual machine? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
