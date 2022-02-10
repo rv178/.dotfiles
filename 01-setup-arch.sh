@@ -85,5 +85,5 @@ else
 	echo -e "[${Gre}*${Whi}] Installation has finished!"
 fi
 
-chmod +x ./03-symlink-configs.sh
-./03-symlink-configs.sh
+chmod +x ./02-configs.sh
+./02-configs.sh

@@ -5,13 +5,13 @@ Clone this repo to `~/.dotfiles`: `git clone https://github.com/idlidev/.dotfile
 `chmod +x ~/.dotfiles/*.sh`
 
 Install packages and symlink configs:
-`~/.dotfiles/01-pkgs-arch-install.sh`
-
-Copy configs:
-`~/.dotfiles/02-copy-configs.sh`
+`~/.dotfiles/01-setup-arch.sh`
 
 Symlink configs (requires stow):
-`~/.dotfiles/03-symlink-configs.sh`
+`~/.dotfiles/02-configs.sh`
+
+Setup doas instead of sudo:
+`~/.dotfiles/03-setup-doas.sh`
 
 ### Setup NeoVim config
 
