@@ -10,9 +10,6 @@ Install packages and symlink configs:
 Symlink configs (requires stow):
 `~/.dotfiles/02-configs.sh`
 
-Setup doas instead of sudo:
-`~/.dotfiles/03-setup-doas.sh`
-
 ### Setup NeoVim config
 
 Copy `.config/nvim` to `~/.config/nvim`
