@@ -18,3 +18,4 @@ lxappearance
 dunst
 nodejs
 stow
+unclutter

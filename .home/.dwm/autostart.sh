@@ -5,6 +5,7 @@ redshift -P -O 4500
 dunst &
 brightnessctl set 75
 nm-applet &
+unclutter --idle 3 &
 
 ~/.fehbg
 ~/.dwm/polybar/launch.sh &
