@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
 NOTIFY_ICON=/usr/share/icons/numigsur-icon-theme/32/apps/system-software-update.svg
-
-get_total_updates() { UPDATES=$(checkupdates 2>/dev/null | wc -l); }
-
-get_total_updates
+UPDATES=$(checkupdates 2>/dev/null | wc -l);
 
 # notify user of updates
 if hash notify-send &>/dev/null; then
