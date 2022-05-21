@@ -22,6 +22,7 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim' " needed for telescope
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 let mapleader=" "
 nnoremap Y y$
