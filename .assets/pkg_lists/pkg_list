@@ -16,3 +16,7 @@ dunst
 nodejs
 stow
 foot
+wayland
+wayland-protocols
+wlroots
+libxkbcommon
