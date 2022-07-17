@@ -3,5 +3,11 @@
 	"rpc.lowerDetailsViewing": "Viewing {file_name}  | on line {current_line}",
 	"rpc.detailsViewing": "Workspace: {workspace_folder}",
 	"rpc.detailsEditing": "Workspace: {workspace_folder}",
-	"rpc.lowerDetailsNotFound": "no workspace :P"
+	"rpc.lowerDetailsNotFound": "No workspace :P",
+	"languageserver": {
+		"zls": {
+			"command": "zls",
+			"filetypes": ["zig"]
+		}
+	}
 }

@@ -3,6 +3,8 @@
 </p>
 <hr />
 
+#### Note: My x11 dotfiles are no longer maintained.
+
 ### Setup
 
 For setting up, see [SETUP.md](./.assets/SETUP.md)

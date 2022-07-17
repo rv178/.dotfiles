@@ -18,4 +18,5 @@ Plug 'nvim-lua/plenary.nvim' " needed for telescope
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'github/copilot.vim'
+Plug 'ziglang/zig.vim'
 call plug#end()
