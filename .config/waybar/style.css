@@ -103,25 +103,7 @@ window#waybar.hidden {
 	color: #88c0d0;
 	background: #2e3440;
 }
-#custom-clock {
-	margin-top: 6px;
-	margin-left: 12px;
-	border-radius: 5px;
-	transition: none;
-	padding: 10px 10px;
-	color: #a3be8c;
-	background: #2e3440;
-}
 
-#custom-mem {
-	margin-top: 6px;
-	margin-left: 12px;
-	border-radius: 5px;
-	transition: none;
-	padding: 10px 10px;
-	color: #88c0d0;
-	background: #2e3440;
-}
 #custom-cpu {
 	margin-top: 6px;
 	margin-left: 12px;
@@ -132,9 +114,19 @@ window#waybar.hidden {
 	background: #2e3440;
 }
 
-#tray {
+#custom-clock {
 	margin-top: 6px;
 	margin-left: 12px;
+	margin-right: 12px;
+	border-radius: 5px;
+	transition: none;
+	padding: 10px 10px;
+	color: #a3be8c;
+	background: #2e3440;
+}
+
+#tray {
+	margin-top: 6px;
 	margin-right: 12px;
 	border-radius: 5px;
 	padding-left: 10px;
