@@ -7,7 +7,7 @@ mod1="Mod1"
 riverctl spawn "dbus-update-activation-environment SEATD_SOCK DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
 
 # Open st
-riverctl map normal $mod Return spawn st
+riverctl map normal $mod Return spawn foot
 
 # Toggle waybar
 riverctl map normal $mod B spawn "killall -SIGUSR1 waybar"
