@@ -2,8 +2,7 @@
 	"layer": "top",
 	"modules-left": ["river/tags"],
 	"modules-center": ["river/window"],
-	"modules-right": [ "battery","backlight", "pulseaudio", "custom/mic","custom/cpu","custom/clock"],
-// "modules-right": [ "network", "custom/cpu","custom/mem", "backlight","pulseaudio", "custom/mic","custom/clock","custom/time","battery"],
+	"modules-right": [ "battery","backlight", "pulseaudio", "custom/mic","custom/cpu","custom/clock", "tray"],
 	"pulseaudio": {
 		"tooltip": false,
 		"scroll-step": 5,

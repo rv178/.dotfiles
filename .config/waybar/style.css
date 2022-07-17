@@ -106,7 +106,6 @@ window#waybar.hidden {
 #custom-clock {
 	margin-top: 6px;
 	margin-left: 12px;
-	margin-right: 12px;
 	border-radius: 5px;
 	transition: none;
 	padding: 10px 10px;
@@ -138,6 +137,8 @@ window#waybar.hidden {
 	margin-left: 12px;
 	margin-right: 12px;
 	border-radius: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
 	color: #d8dee9;
 	background: #2e3440;
 }
