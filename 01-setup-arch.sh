@@ -1,11 +1,9 @@
 Red='\e[0;31m';
 Gre='\e[0;32m';
-Yel='\e[0;33m';
 Cya='\e[0;36m';
 Whi='\e[0;37m';
 
 # Synchronize package databases
-
 echo -e "[${Red}*${Whi}] Updating system.."
 sudo pacman -Syu
 
@@ -24,7 +22,7 @@ done
 
 # Install ST terminal emulator
 echo -e "[${Red}+${Whi}] Installing ST"
-git clone https://github.com/idlidev/xelph-st-git
+git clone https://github.com/rv178/xelph-st-git
 cd xelph-st-git/opt/xelph-st-git
 sudo make clean install
 cd ~/.dotfiles
