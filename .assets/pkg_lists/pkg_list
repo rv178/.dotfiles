@@ -20,3 +20,4 @@ wayland
 wayland-protocols
 wlroots
 libxkbcommon
+swaylock
