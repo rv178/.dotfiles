@@ -1,6 +1,9 @@
 libxft-bgra
-betterlockscreen
 nerd-fonts-jetbrains-mono
 brave-bin
 montserrat-ttf
-polybar-dwm-module
+wlsunset
+river-git
+waybar-git
+swhkd-git
+wayshot-git

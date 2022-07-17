@@ -3,27 +3,20 @@
 </p>
 <hr />
 
+### Wayland dotfiles
+
+-   Compositor: River
+-   Bar: Waybar
+-   Notification daemon: Dunst
+-   Editor: NeoVim
+
 ### Setup
 
 For setting up, see [SETUP.md](./.assets/SETUP.md)
 
 ### Screenshots
 
-<details><summary>DWM</summary>
-
-![Alt text](./.assets/screenshots/ss2.png)
-
-</details>
-
-<details><summary>BSPWM</summary>
-
-![Alt text](./.assets/screenshots/ss1.png)
-
-</details>
-
-<details><summary>NeoVim</summary>
-
-![Alt text](./.assets/screenshots/ss3.png)
+Work in progress
 
 </details>
 

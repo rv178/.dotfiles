@@ -1,6 +1,6 @@
 ### Setup
 
-Clone this repo to `~/.dotfiles`: `git clone https://github.com/idlidev/.dotfiles ~/.dotfiles`
+Clone this repo to `~/.dotfiles`: `git clone https://github.com/rv178/.dotfiles ~/.dotfiles`
 
 `chmod +x ~/.dotfiles/*.sh`
 
