@@ -57,6 +57,16 @@ window#waybar.hidden {
 	color: #81a1c1;
 }
 
+#temperature {
+	margin-top: 6px;
+	margin-left: 12px;
+	border-radius: 5px;
+	transition: none;
+	padding: 0 10px;
+	color: #a3be8c;
+	background: #2e3440;
+}
+
 #pulseaudio {
 	margin-top: 6px;
 	margin-left: 12px;
