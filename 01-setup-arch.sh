@@ -4,7 +4,7 @@ Yel='\e[0;33m';
 Cya='\e[0;36m';
 Whi='\e[0;37m';
 
-# Synchronize package databases 
+# Synchronize package databases
 
 echo -e "[${Red}*${Whi}] Updating system.."
 sudo pacman -Syu
@@ -21,24 +21,6 @@ for repo_pkg in $(cat ~/.dotfiles/.assets/pkg_lists/pkg_list.txt)
 do
 	sudo pacman -S --noconfirm --needed $repo_pkg
 done
-
-# -----
-
-echo -e "[${Yel}*${Whi}] Do you want to install DWM or BSPWM [Select (1) for DWM and (2) for BSPWM]?"
-read -r -p "(1 / 2) -> " response
-if [[ "$response" =~ ^([1])$ ]]
-then
-	mkdir dotfiles-build
-	cd dotfiles-build
-	git clone https://github.com/idlidev/dwm
-	cd dwm
-	make poly
-
-	echo -e "${Whi}[${Gre}*${Whi}] Installed DWM"
-else
-	sudo pacman -S bspwm
-	echo -e "${Whi}[${Gre}*${Whi}] Installed BSPWM"
-fi
 
 # Install ST terminal emulator
 echo -e "[${Red}+${Whi}] Installing ST"
@@ -73,17 +55,6 @@ echo -e "[${Gre}*${Whi}] Cloning GTK theme and icons"
 
 sudo git clone https://codeberg.org/tplasdio/numigsur-icon-theme.git /usr/share/icons/numigsur-icon-theme
 sudo git clone https://github.com/EliverLara/Nordic /usr/share/themes/Nordic
-
-# Install picom if user is not invoking the script in a vm
-read -r -p "Are you installing this on a virtual machine? [y/N] " response
-if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
-then
-	echo -e "[${Gre}*${Whi}] Installation has finished!"
-else
-	echo -e "[${Red}+${Whi}] Installing picom"
-	sudo aura -Acax --noconfirm picom-ibhagwan-git
-	echo -e "[${Gre}*${Whi}] Installation has finished!"
-fi
 
 chmod +x ./02-configs.sh
 ./02-configs.sh
