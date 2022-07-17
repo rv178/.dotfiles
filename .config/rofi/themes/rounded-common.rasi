@@ -1,5 +1,5 @@
 /*******************************************************************************
- * ROUNDED THEME FOR ROFI 
+ * ROUNDED THEME FOR ROFI
  * Theme Repo           : https://github.com/lr-tech/rofi-themes-collection
  * Slightly edited by me :P
  *******************************************************************************/
@@ -20,7 +20,6 @@ window {
     width:          600;
     y-offset:       -200;
     border-radius:  24px;
-    
     background-color:   @bg0;
 }
 
