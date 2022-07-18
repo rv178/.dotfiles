@@ -3,12 +3,6 @@
 export PROMPT="%F{red}%n%f:%F{cyan}%m%f"$'\n'"%F{cyan} %B%30<..<%~%b %F{red}❯❯ "
 # export PROMPT="%F{cyan} %B%30<..<%~%b %F{red}❯❯ "
 ~/.config/scripts/colors/zwaves
-# Default editor
-export EDITOR=nvim
-# Path to NVM
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH:$HOME/.bin:/usr/local/go/bin"
-# Customizing man theme with bat
-export MANPAGER="sh -c 'col -bx | bat --theme Nord -l man -p'"
 
 HISTFILE=~/.zsh/.zsh-history
 HISTSIZE=1000000

@@ -38,8 +38,8 @@ riverctl map normal $mod H send-layout-cmd rivertile "main-ratio -0.05"
 riverctl map normal $mod L send-layout-cmd rivertile "main-ratio +0.05"
 
 # Mod+Shift+H and Mod+Shift+L to increment/decrement the main count of rivertile(1)
-riverctl map normal $mod+Shift H send-layout-cmd rivertile "main-count +1"
-riverctl map normal $mod+Shift L send-layout-cmd rivertile "main-count -1"
+riverctl map normal $mod+Mod1 H send-layout-cmd rivertile "main-count +1"
+riverctl map normal $mod+Mod1 L send-layout-cmd rivertile "main-count -1"
 
 # Mod+{left,right,up,down} to move views
 riverctl map normal $mod left move left 100
@@ -94,11 +94,11 @@ riverctl map normal $mod F toggle-float
 # Toggle fullscreen
 riverctl map normal $mod M toggle-fullscreen
 
-# Mod+Alt+{Up,Right,Down,Left} to change layout orientation
-riverctl map normal $mod+Mod1 K    send-layout-cmd rivertile "main-location top"
-riverctl map normal $mod+Mod1 L send-layout-cmd rivertile "main-location right"
-riverctl map normal $mod+Mod1 J  send-layout-cmd rivertile "main-location bottom"
-riverctl map normal $mod+Mod1 H  send-layout-cmd rivertile "main-location left"
+# Mod+Shift+Alt+{H,J,K,L} to change layout orientation
+riverctl map normal $mod+Shift+Mod1 K    send-layout-cmd rivertile "main-location top"
+riverctl map normal $mod+Shift+Mod1 L send-layout-cmd rivertile "main-location right"
+riverctl map normal $mod+Shift+Mod1 J  send-layout-cmd rivertile "main-location bottom"
+riverctl map normal $mod+Shift+Mod1 H  send-layout-cmd rivertile "main-location left"
 
 # Set background and border color
 riverctl border-color-focused 0x5e81ac
@@ -129,6 +129,7 @@ bash $HOME/.config/river/process.sh
 # usage: import-gsettings
 config="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-3.0/settings.ini"
 if [ ! -f "$config" ]; then exit 1; fi
+
 gnome_schema="org.gnome.desktop.interface"
 gtk_theme="$(grep 'gtk-theme-name' "$config" | sed 's/.*\s*=\s*//')"
 icon_theme="$(grep 'gtk-icon-theme-name' "$config" | sed 's/.*\s*=\s*//')"
@@ -138,3 +139,5 @@ gsettings set "$gnome_schema" gtk-theme "$gtk_theme"
 gsettings set "$gnome_schema" icon-theme "$icon_theme"
 gsettings set "$gnome_schema" cursor-theme "$cursor_theme"
 gsettings set "$gnome_schema" font-name "$font_name"
+
+riverctl spawn "import-gsettings"
