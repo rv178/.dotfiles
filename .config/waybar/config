@@ -34,7 +34,7 @@
 	},
 	"river/window": {
 		"format": "{}",
-		"max-length": 53
+		"max-length": 90
 	},
 	"backlight": {
 		"device": "amdgpu_b10",
