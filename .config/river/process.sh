@@ -1,5 +1,5 @@
-killall dunst
-dunst &
+killall mako
+mako &
 killall waybar
 waybar &
 killall polkit-gnome-authentication-agent-1
@@ -21,4 +21,6 @@ do
 done
 
 killall swaybg
-swaybg -i /home/rv/extras/nordic-wallpapers/wallpapers/ign_beyondHillAndDale.jpg
+swaybg -i ~/extras/nordic-wallpapers/wallpapers/ign_beyondHillAndDale.jpg
+
+~/.config/scripts/updates.sh

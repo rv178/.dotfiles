@@ -6,6 +6,7 @@ export XDG_DATA_HOME=${HOME}/.local/share
 export XDG_SESSION_DESKTOP=river
 export XDG_SESSION_TYPE=wayland
 
+export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
 export GTK_USE_PORTAL=0
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export GOPROXY=direct
@@ -30,5 +31,4 @@ export MANPAGER="sh -c 'col -bx | bat --theme Nord -l man -p'"
 
 if [[ -z $WAYLAND_DISPLAY && $(tty) = "/dev/tty1" ]]; then
 	exec dbus-run-session river -log-level debug > /tmp/river-${timestamp}.log 2>&1
-	~/.config/scripts/updates.sh
 fi

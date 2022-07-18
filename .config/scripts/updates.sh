@@ -5,14 +5,14 @@ UPDATES=$(checkupdates 2>/dev/null | wc -l);
 
 # notify user of updates
 if hash notify-send &>/dev/null; then
-    if (( UPDATES > 50 )); then
-        notify-send -a "Updates" -i $NOTIFY_ICON \
-            "You really need to update!!" "$UPDATES New packages"
-    elif (( UPDATES > 25 )); then
-        notify-send -a "Updates" -i $NOTIFY_ICON \
-            "You should update soon" "$UPDATES New packages"
-    elif (( UPDATES > 2 )); then
-        notify-send -a "Updates" -i $NOTIFY_ICON \
-            "$UPDATES New packages"
-    fi
+	if (( UPDATES > 50 )); then
+		notify-send -a "Updates" -i $NOTIFY_ICON \
+			"You really need to update!!" "$UPDATES New packages"
+	elif (( UPDATES > 25 )); then
+		notify-send -a "Updates" -i $NOTIFY_ICON \
+			"You should update soon" "$UPDATES New packages"
+	elif (( UPDATES > 2 )); then
+		notify-send -a "Updates" -i $NOTIFY_ICON \
+			"$UPDATES New packages"
+	fi
 fi
