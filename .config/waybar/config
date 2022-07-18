@@ -65,7 +65,8 @@
 	"tray":{
 		"icon-size":18,
 		"show-passive-items":true,
-		"spacing": 10
+		"spacing": 10,
+		"reverse-direction": true
 	},
 	"custom/clock": {
 		"interval": 1,
