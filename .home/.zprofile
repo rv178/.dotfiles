@@ -19,6 +19,7 @@ export QT_QPA_PLATFORM=wayland
 export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 export _JAVA_AWT_WM_NONREPARENTING=1
+export GPG_TTY=$(tty)
 
 export EDITOR=nvim
 export MANPAGER="sh -c 'col -bx | bat --theme Nord -l man -p'"
