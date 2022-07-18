@@ -22,6 +22,17 @@ window#waybar.hidden {
 	background: #2e3440;
 	color: #d8dee9;
 }
+
+#custom-powermenu {
+	margin-top: 6px;
+	margin-left: 12px;
+	padding-left: 15px;
+	padding-right: 20px;
+	border-radius: 5px;
+	transition: none;
+	background: #2e3440;
+}
+
 #tags {
 	margin-top: 6px;
 	margin-left: 12px;

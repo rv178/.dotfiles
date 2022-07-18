@@ -1,8 +1,8 @@
 {
 	"layer": "top",
-	"modules-left": ["river/tags", "temperature"],
+	"modules-left": ["custom/powermenu", "river/tags", "temperature"],
 	"modules-center": ["river/window"],
-	"modules-right": [ "battery","backlight", "pulseaudio", "custom/mic","custom/cpu","custom/clock", "tray"],
+	"modules-right": ["battery","backlight", "pulseaudio", "custom/mic","custom/cpu","custom/clock", "tray"],
 	"pulseaudio": {
 		"tooltip": false,
 		"scroll-step": 5,
@@ -13,6 +13,14 @@
 		"format-icons": {
 			"default": ["", "", ""]
 		}
+	},
+	"custom/powermenu": {
+		"format": "",
+		"interval": "once",
+		/*"exec": "checkupdates | wc -l",*/
+		"on-click": "~/.config/waybar/modules/powermenu.sh",
+		"tooltip": false,
+		"signal": 8
 	},
 
 	"river/tags": {

@@ -40,6 +40,7 @@ alias gma='git commit -aS'
 alias gp='git push'
 alias gpull='git pull'
 alias fnd='findfile=$(find . | fzf) && nvim $findfile'
+alias swhkdrc='nvim ~/.config/swhkd/swhkdrc'
 
 # Load on startup
 _startup() {
