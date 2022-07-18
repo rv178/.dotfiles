@@ -5,7 +5,7 @@ waybar &
 killall polkit-gnome-authentication-agent-1
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 killall nm-applet
-nm-applet &
+nm-applet --indicator &
 wlsunset -T 4500 &
 brightnessctl set 75
 swhks &
