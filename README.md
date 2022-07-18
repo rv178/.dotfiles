@@ -7,7 +7,7 @@
 
 -   Compositor: River
 -   Bar: Waybar
--   Notification daemon: Dunst
+-   Notification daemon: Mako
 -   Editor: NeoVim
 
 ### Setup
