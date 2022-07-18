@@ -1,12 +1,12 @@
 sort=-time
 layer=overlay
 icons=1
-max-icon-size=64
+max-icon-size=50
 default-timeout=7000
 
-font=JetbrainsMono Nerd Font 10
+font=JetbrainsMono Nerd Font 9
 width=350
-height=3500
+height=1500
 border-radius=0
 padding=10
 max-history=30

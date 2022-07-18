@@ -8,6 +8,7 @@ export XDG_SESSION_TYPE=wayland
 
 export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
 export GTK_USE_PORTAL=0
+export GDK_BACKEND=wayland
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export GOPROXY=direct
 export LEIN_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/lein"
