@@ -10,6 +10,8 @@
 -   Notification daemon: Mako
 -   Editor: NeoVim
 
+### For x11 dotfiles see the [x11](https://github.com/rv178/.dotfiles/tree/x11) branch. (no longer maintained)
+
 ### Setup
 
 For setting up, see [SETUP.md](./.assets/SETUP.md)
