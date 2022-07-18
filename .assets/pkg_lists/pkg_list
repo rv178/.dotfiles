@@ -1,4 +1,3 @@
-opendoas
 git
 neovim
 ranger
@@ -8,6 +7,7 @@ wl-clipboard
 zsh
 polkit-gnome
 swaybg
+swaylock
 exa
 bat
 ttf-jetbrains-mono
@@ -20,4 +20,13 @@ wayland
 wayland-protocols
 wlroots
 libxkbcommon
-swaylock
+blueberry
+bluez
+bluez-utils
+pipewire
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+playerctl
+qt5-wayland
