@@ -57,8 +57,8 @@
 			"critical": 20
 		},
 		"format": "{icon}  {capacity}%",
-		"format-charging": "   {capacity}%",
-		"format-plugged": "   {capacity}%",
+		"format-charging": "{icon}   {capacity}%",
+		"format-plugged": "{icon}   {capacity}%",
 		"format-alt": "{time} {icon}",
 		"format-icons": ["", "", "", "", ""]
 	},
@@ -80,10 +80,4 @@
 		"exec": "~/.config/waybar/modules/cpu.sh",
 		"tooltip": false
 	},
-	"custom/mem": {
-		"interval": 1,
-		"return-type": "string",
-		"exec": "~/.config/waybar/modules/mem.sh",
-		"tooltip": false
-	}
 }

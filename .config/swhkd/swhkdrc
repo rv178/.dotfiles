@@ -8,7 +8,7 @@ super + shift + l
 	swaylock
 
 Print
-	wayshot -s "$(slurp -f '%x %y %w %h')" --stdout | wl-copy
+	wayshot -s "$(slurp -f '%x %y %w %h')" --stdout | swappy -f -
 
 XF86MonBrightnessUp
 	brightnessctl set 5%+

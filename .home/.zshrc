@@ -30,8 +30,6 @@ alias cat='bat --theme Nord'
 alias l='exa -lahF --color=always --icons --sort=size --group-directories-first'
 alias ls='ls -lahF --color=always'
 alias c='clear'
-alias loadnvm='export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
 alias hst='history 1 -1 | cut -c 8- | sort | uniq | fzf | xclip -sel c'
 alias gst='git status'
 alias gm='git commit -S'
@@ -41,6 +39,8 @@ alias gp='git push'
 alias gpull='git pull'
 alias fnd='findfile=$(find . | fzf) && nvim $findfile'
 alias swhkdrc='nvim ~/.config/swhkd/swhkdrc'
+alias loadnvm='export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.config/nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
 
 # Load on startup
 _startup() {

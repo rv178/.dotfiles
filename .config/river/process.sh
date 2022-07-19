@@ -1,13 +1,20 @@
 killall mako
 mako &
+
 killall waybar
 waybar &
+
 killall polkit-gnome-authentication-agent-1
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
 killall nm-applet
 nm-applet --indicator &
+
+killall wlsunset
 wlsunset -T 4500 &
 brightnessctl set 75
+
+killall swhks
 swhks &
 pkexec swhkd &
 

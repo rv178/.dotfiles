@@ -28,5 +28,7 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+wireplumber
+xdg-desktop-portal-wlr
 playerctl
 qt5-wayland
