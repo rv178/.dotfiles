@@ -30,6 +30,7 @@ export MANPAGER="sh -c 'col -bx | bat --theme Nord -l man -p'"
 [[ -d "$HOME/.local/share/cargo/bin" ]] && PATH="$HOME/.local/share/cargo/bin:$PATH"
 [[ -d "$HOME/.local/share/go/bin" ]] && PATH="$HOME/.local/share/go/bin:$PATH"
 [[ -d "$HOME/.config/yarn/global/node_modules/.bin" ]] && PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+[[ -d "$HOME/.spicetify" ]] && PATH="$HOME/.spicetify:$PATH"
 
 if [[ -z $WAYLAND_DISPLAY && $(tty) = "/dev/tty1" ]]; then
 	exec dbus-run-session river -log-level debug > /tmp/river-${timestamp}.log 2>&1

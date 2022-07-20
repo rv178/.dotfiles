@@ -8,6 +8,9 @@ super + shift + l
 	swaylock
 
 Print
+	wayshot -s "$(slurp -f '%x %y %w %h')" --stdout | wl-copy
+
+super + Print
 	wayshot -s "$(slurp -f '%x %y %w %h')" --stdout | swappy -f -
 
 XF86MonBrightnessUp
@@ -24,3 +27,6 @@ XF86AudioLowerVolume
 
 XF86AudioMute
 	amixer -D pulse set Master 1+ toggle
+
+capslock
+	notify-send -a "Caps Lock" "Caps lock key was toggled."

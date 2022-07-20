@@ -28,6 +28,6 @@ do
 done
 
 killall swaybg
-swaybg -i ~/extras/nordic-wallpapers/wallpapers/ign_beyondHillAndDale.jpg
+swaybg -i ~/Pictures/nord-wps/ign_beyondHillAndDale.jpg
 
 ~/.config/scripts/updates.sh
