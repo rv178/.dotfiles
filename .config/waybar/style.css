@@ -26,6 +26,7 @@ window#waybar.hidden {
 #custom-powermenu {
 	margin-top: 6px;
 	margin-left: 12px;
+	margin-right: 12px;
 	padding-left: 15px;
 	padding-right: 20px;
 	border-radius: 5px;
@@ -35,7 +36,7 @@ window#waybar.hidden {
 
 #tags {
 	margin-top: 6px;
-	margin-left: 12px;
+	margin-right: 12px;
 	font-size: 4px;
 	border-radius: 5px;
 	transition: none;
@@ -70,7 +71,6 @@ window#waybar.hidden {
 
 #temperature {
 	margin-top: 6px;
-	margin-left: 12px;
 	margin-right: 12px;
 	border-radius: 5px;
 	transition: none;
