@@ -5,7 +5,7 @@ show-keyboard-layout
 bs-hl-color=b48eadff
 caps-lock-bs-hl-color=d08770ff
 caps-lock-key-hl-color=ebcb8bff
-font=Montserrat
+font=JetbrainsMono
 indicator-radius=100
 indicator-thickness=10
 inside-color=2e3440ff
