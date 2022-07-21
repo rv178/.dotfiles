@@ -19,7 +19,7 @@ riverctl map normal $mod C spawn "rofi -show drun -show-icons -display-drun \"Se
 riverctl map normal $mod+Shift D spawn "discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy"
 
 # Lock screen
-riverctl map normal $mod+Shift L spawn "swaylock"
+riverctl map normal $mod+Shift L spawn "swaylock -i ~/.dotfiles/.assets/wallpapers/archlinux.png"
 
 # Reload river configuration
 riverctl map normal $mod+Shift R spawn "~/.config/river/init"
