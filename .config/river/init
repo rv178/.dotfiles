@@ -13,7 +13,7 @@ riverctl map normal $mod Return spawn foot
 riverctl map normal $mod B spawn "killall -SIGUSR1 waybar"
 
 # Open rofi
-riverctl map normal $mod C spawn "rofi -show drun -show-icons"
+riverctl map normal $mod C spawn "rofi -show drun -show-icons -display-drun \"Search\""
 
 # Open discord
 riverctl map normal $mod+Shift D spawn "discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy"

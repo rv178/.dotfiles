@@ -1,5 +1,5 @@
 rofiopt="Normal\nSwappy"
-rofi=$(printf "$rofiopt" | rofi -dmenu -i )
+rofi=$(printf "$rofiopt" | rofi -dmenu -i -p "Screenshot")
 [ -z "$rofi" ] && exit
 
 case $rofi in
