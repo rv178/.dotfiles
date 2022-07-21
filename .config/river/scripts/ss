@@ -1,1 +1,9 @@
-wayshot -s "$(slurp -f '%x %y %w %h')" --stdout | wl-copy
+rofiopt="Normal\nSwappy"
+rofi=$(printf "$rofiopt" | rofi -dmenu -i )
+[ -z "$rofi" ] && exit
+
+case $rofi in
+	"Normal") wayshot -s "$(slurp -f '%x %y %w %h')" --stdout | wl-copy;;
+	"Swappy") wayshot -s "$(slurp -f '%x %y %w %h')" --stdout | swappy -f -;;
+	*)
+esac

@@ -128,9 +128,6 @@ do
 
     # Screenshot
     riverctl map $mode None Print spawn '/home/$USER/.config/river/scripts/ss'
-
-    # Screenshot, with swappy <placeholder>
-    #riverctl map $mode None Shift Print spawn '/home/$USER/.config/river/scripts/ss-swappy'
 done
 
 # Set background and border color
