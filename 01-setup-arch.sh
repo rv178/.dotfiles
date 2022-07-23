@@ -20,13 +20,6 @@ do
 	sudo pacman -S --noconfirm --needed $repo_pkg
 done
 
-# Install ST terminal emulator
-echo -e "[${Red}+${Whi}] Installing ST"
-git clone https://github.com/rv178/xelph-st-git
-cd xelph-st-git/opt/xelph-st-git
-sudo make clean install
-cd ~/.dotfiles
-
 # Install pkgs from the AUR
 echo -e "[${Cya}+${Whi}] Installing AUR packages"
 for aur_pkg in $(cat ~/.dotfiles/.assets/pkg_lists/aur_pkg_list)
