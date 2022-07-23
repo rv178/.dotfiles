@@ -1,3 +1,4 @@
+vim.cmd([[
 call plug#begin('~/.vim/plugged')
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'psliwka/vim-smoothie'
@@ -20,3 +21,4 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'github/copilot.vim'
 Plug 'ziglang/zig.vim'
 call plug#end()
+]])
