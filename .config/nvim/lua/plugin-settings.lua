@@ -17,7 +17,7 @@ vim.g.smoothie_enabled = 1
 vim.g.coc_global_extensions = {
 	'coc-snippets',
 	'coc-rls',
-	--\ 'coc-java',
+	--'coc-java',
 	'coc-go',
 	'coc-discord-rpc',
 	'coc-pairs',

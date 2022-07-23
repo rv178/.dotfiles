@@ -7,11 +7,11 @@ Plug 'psliwka/vim-smoothie'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'honza/vim-snippets'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'neoclide/coc.nvim'
+Plug('neoclide/coc.nvim', {['branch'] = 'release'})
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
-Plug 'prettier/vim-prettier'
+Plug('prettier/vim-prettier', {['do'] = 'yarn install'})
 Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
