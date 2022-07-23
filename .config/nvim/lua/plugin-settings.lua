@@ -1,23 +1,13 @@
 vim.g['airline#extensions#tabline#enabled'] = 1
 vim.g.airline_theme = 'nord'
+vim.cmd("let g:airline_section_z = airline#section#create(['windowswap', 'obsession', 'linenr', 'maxlinenr'])")
+
 vim.g.WebDevIconsUnicodeDecorateFolderNodes = 1
 vim.g.NERDTreeGitStatusUseNerdFonts = 1
 vim.g.NERDTreeGitStatusShowIgnored = 1
 vim.g.NERDTreeGitStatusShowClean = 1
 vim.g.NERDTreeGitStatusWithFlags = 1
 vim.g.NERDTreeWinSize = 20
---vim.g.NERDTreeGitStatusIndicatorMapCustom = {
-	--'Modified'  ='✹',
-	--'Staged'    ='✚',
-	--'Untracked' ='✭',
-	--'Renamed'   ='➜',
-	--'Unmerged'  ='═',
-	--'Deleted'   ='✖',
-	--'Dirty'     ='✗',
-	--'Ignored'   ='☒',
-	--'Clean'     ='✔︎',
-	--'Unknown'   ='?',
---}
 
 vim.g['prettier#quickfix_enabled'] = 0
 vim.g['prettier#quickfix_auto_focus'] = 0

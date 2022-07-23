@@ -21,13 +21,13 @@ map('n', "<leader>6", "6gt", {noremap=true})
 map('n', "<leader>7", "7gt", {noremap=true})
 map('n', "<leader>8", "8gt", {noremap=true})
 map('n', "<leader>9", "9gt", {noremap=true})
+map('n', '<leader>0', ':tablast<cr>', {noremap=true})
 
 map('n', '<leader>p', '*yy', {noremap=true})
 map('n', '<leader>p', '*y', {noremap=true})
-map('n', '<leader>0', ':tablast<cr>', {noremap=true})
 
-map('n', '<silent> <leader>+', ':vertical resize +5<CR>', {noremap=true})
-map('n', '<silent> <leader>-', ':vertical resize -5<CR>', {noremap=true})
+map('n', '<leader>+', ':vertical resize +5<CR>', {noremap=true})
+map('n', '<leader>-', ':vertical resize -5<CR>', {noremap=true})
 
 map('n', '<leader>rn', '<Plug>(coc-rename)')
 map('n', '<leader>gh', ':diffget //3<CR>')
@@ -65,7 +65,6 @@ map('n', '<silent> <space>k', ':<C-u>CocPrev<cr>', {noremap=true})
 
 map('n', 'Y', 'y$', {noremap=true})
 map('n', 'Q', '<Nop>', {noremap=true})
-map('n', '<silent> K', ':call <SID>show_documentation()<cr>', {noremap=true})
 map('n', '<esc>', ':noh<cr>', {noremap=true})
 
 map('n', 'cc', '<Plug>NERDCommenterToggle')
