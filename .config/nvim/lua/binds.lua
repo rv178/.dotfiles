@@ -51,7 +51,11 @@ map('n', '<C-G>', '<cmd>Telescope live_grep<cr>', {noremap=true})
 map('n', '<C-s>', ':w', {noremap=true})
 
 map('n', '<C-n>', ':NERDTreeToggle<CR>')
+--map('n', '<S-Down>', '<C-d>')
+--map('n', '<S-Up>', '<C-u>')
 
+--map('v', '<S-Down>', '<C-d>')
+--map('v', '<S-Up>', '<C-u>')
 
 map('n', '<silent> <space>a', ':<C-u>CocList diagnostics<cr>', {noremap=true})
 map('n', '<silent> <space>e', ':<C-u>CocList extensions<cr>', {noremap=true})

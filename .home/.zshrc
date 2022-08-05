@@ -22,8 +22,8 @@ bindkey '^e' edit-command-line
 
 # Aliases
 alias zshrc='nvim ~/.zshrc'
-alias record='ffmpeg -video_size 1366x768 -framerate 60 -f x11grab -i :0 screen-out.mp4'
-alias recordcam='ffmpeg -f v4l2 -framerate 25 -video_size 1366x768 -i /dev/video0 cam-out.mp4'
+alias recordcam='ffmpeg -f v4l2 -framerate 60 -i /dev/video0 cam-out.mp4'
+alias takephoto='ffmpeg -f video4linux2 -i /dev/video0 -vframes 1  test.png'
 alias qsession='pkill -KILL -u $USER'
 alias q='exit'
 alias cat='bat --theme Nord'

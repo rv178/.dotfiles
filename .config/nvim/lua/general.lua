@@ -24,6 +24,7 @@ vim.opt.signcolumn="yes"
 vim.opt.mouse="a"
 vim.opt.title = true
 vim.opt.statusline = vim.opt.statusline ^ "%{coc#status()}%{get(b:,'coc_current_function','')}"
+vim.wo.wrap = false
 
 vim.cmd("command! -nargs=0 Prettier :CocCommand prettier.formatFile")
 vim.cmd("command! -nargs=0 Format :call CocAction('format') ")
