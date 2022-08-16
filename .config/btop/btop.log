@@ -1,0 +1,32 @@
+
+2021/10/18 (08:29:10) | ===> btop++ v.1.0.15
+2021/10/18 (08:29:10) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
+
+2021/10/18 (14:38:15) | ===> btop++ v.1.0.15
+2021/10/18 (14:38:15) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
+
+2021/11/19 (11:00:40) | ===> btop++ v.1.1.0
+2021/11/19 (11:00:40) | ERROR: Stall in Runner thread, restarting!
+
+2021/11/23 (13:19:49) | ===> btop++ v.1.1.0
+2021/11/23 (13:19:49) | INFO: Logger set to INFO
+
+2022/07/09 (17:54:42) | ===> btop++ v.1.2.8
+2022/07/09 (17:54:42) | ERROR: No tty detected!
+btop++ needs an interactive shell to run.
+
+2022/07/09 (17:55:30) | ===> btop++ v.1.2.8
+2022/07/09 (17:55:30) | ERROR: No tty detected!
+btop++ needs an interactive shell to run.
+
+2022/07/10 (15:17:02) | ===> btop++ v.1.2.8
+2022/07/10 (15:17:02) | ERROR: No tty detected!
+btop++ needs an interactive shell to run.
+
+2022/07/10 (15:17:11) | ===> btop++ v.1.2.8
+2022/07/10 (15:17:11) | ERROR: No tty detected!
+btop++ needs an interactive shell to run.
+
+2022/07/10 (17:19:30) | ===> btop++ v.1.2.8
+2022/07/10 (17:19:30) | ERROR: No tty detected!
+btop++ needs an interactive shell to run.
