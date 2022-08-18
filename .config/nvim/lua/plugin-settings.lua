@@ -20,6 +20,5 @@ vim.g.coc_global_extensions = {
 	'coc-go',
 	'coc-discord-rpc',
 	'coc-pairs',
-	'coc-prettier',
 	'coc-json',
 }
