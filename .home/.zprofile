@@ -32,7 +32,6 @@ export MANPAGER="sh -c 'col -bx | bat --theme Nord -l man -p'"
 [[ -d "$HOME/.config/yarn/global/node_modules/.bin" ]] && PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 [[ -d "$HOME/.spicetify" ]] && PATH="$HOME/.spicetify:$PATH"
 [[ -d "$HOME/.yarn/bin" ]] && PATH="$HOME/.yarn/bin:$PATH"
-# .local/share/gem/ruby/3.0.0/bin
 [[ -d "$HOME/.local/share/gem/ruby/3.0.0/bin" ]] && PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 
 
