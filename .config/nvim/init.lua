@@ -1,4 +1,5 @@
 require("plugins")
 require("general")
-require("plugin-settings")
 require("binds")
+require("lsp")
+require("impatient").enable_profile()

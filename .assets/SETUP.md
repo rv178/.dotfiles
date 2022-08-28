@@ -10,17 +10,6 @@ Install packages and symlink configs:
 Symlink configs (requires stow):
 `~/.dotfiles/02-configs.sh`
 
-### Setup NeoVim config
+#### Neovim
 
-Copy `.config/nvim` to `~/.config/nvim`
-
-Install vim-plug from [here](https://github.com/junegunn/vim-plug)
-
-```sh
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-```
-
-Copy `~/.dotfiles/.config/nvim` to `~/.config/nvim`
-
-Open NeoVim and do `:PlugInstall`
+Run `~/.dotfiles/.config/nvim/lsp.sh` to install LSP binaries.
