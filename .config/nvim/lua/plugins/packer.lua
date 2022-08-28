@@ -37,6 +37,7 @@ local plugins = function(use)
 	use("prettier/vim-prettier", {["run"] = "yarn install"})
 	use("github/copilot.vim")
 	use("steelsojka/pears.nvim")
+	use("andweeb/presence.nvim")
 
 	use("arcticicestudio/nord-vim")
 	use("vim-airline/vim-airline")
