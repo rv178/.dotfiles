@@ -8,40 +8,32 @@ vim.cmd("let g:airline_section_z = airline#section#create(['windowswap', 'obsess
 -- vim smoothie
 vim.g.smoothie_enabled = 1
 
--- prettier
-vim.g['prettier#quickfix_enabled'] = 0
-vim.g['prettier#quickfix_auto_focus'] = 0
-vim.g['prettier#autoformat'] = 1
-vim.g['prettier#autoformat_require_pragma'] = 0
-
--- nerd tree
-vim.g.WebDevIconsUnicodeDecorateFolderNodes = 1
-vim.g.NERDTreeGitStatusUseNerdFonts = 1
-vim.g.NERDTreeGitStatusShowIgnored = 1
-vim.g.NERDTreeGitStatusShowClean = 1
-vim.g.NERDTreeGitStatusWithFlags = 1
-vim.g.NERDTreeWinSize = 20
-
--- presence
-require("presence"):setup({
-    -- General options
-    auto_update         = true,                       -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
-    neovim_image_text   = "NeoVim", 				  -- Text displayed when hovered over the Neovim image
-    main_image          = "file",                     -- Main image display (either "neovim" or "file")
-    client_id           = "793271441293967371",       -- Use your own Discord application client id (not recommended)
-    log_level           = "error",                        -- Log messages at or above this level (one of the following: "debug", "info", "warn", "error")
-    debounce_timeout    = 10,                         -- Number of seconds to debounce events (or calls to `:lua package.loaded.presence:update(<filename>, true)`)
-    enable_line_number  = true,                       -- Displays the current line number instead of the current project
-    blacklist           = {},                         -- A list of strings or Lua patterns that disable Rich Presence if the current file name, path, or workspace matches
-    buttons             = true,                       -- Configure Rich Presence button(s), either a boolean to enable/disable, a static table (`{{ label = "<label>", url = "<url>" }, ...}`, or a function(buffer: string, repo_url: string|nil): table)
-    file_assets         = {},                         -- Custom file asset definitions keyed by file names and extensions (see default config at `lua/presence/file_assets.lua` for reference)
-
-    -- Rich Presence text options
-    editing_text        = "Editing %s",               -- Format string rendered when an editable file is loaded in the buffer (either string or function(filename: string): string)
-    file_explorer_text  = "Browsing %s",              -- Format string rendered when browsing a file explorer (either string or function(file_explorer_name: string): string)
-    git_commit_text     = "Committing changes",       -- Format string rendered when committing changes in git (either string or function(filename: string): string)
-    plugin_manager_text = "Managing plugins",         -- Format string rendered when managing plugins (either string or function(plugin_manager_name: string): string)
-    reading_text        = "Reading %s",               -- Format string rendered when a read-only or unmodifiable file is loaded in the buffer (either string or function(filename: string): string)
-    workspace_text      = "Working on %s",            -- Format string rendered when in a git repository (either string or function(project_name: string|nil, filename: string): string)
-    line_number_text    = "On line %s",        -- Format string rendered when `enable_line_number` is set to true (either string or function(line_number: number, line_count: number): string)
+-- nvim-tree.lua setup
+require("nvim-tree").setup({
+	sort_by = "case_sensitive",
+	view = {
+		adaptive_size = false,
+		mappings = {
+			list = {
+				{ key = "u", action = "dir_up" },
+			},
+		},
+	},
+	renderer = {
+		indent_markers = {
+			enable = true,
+			inline_arrows = true,
+			icons = {
+				corner = "└",
+				edge = "│",
+				item = "│",
+				none = " ",
+			},
+		}
+	},
+	filters = {
+		dotfiles = false,
+	},
 })
+
+vim.cmd("highlight NvimTreeFolderIcon guibg=blue")

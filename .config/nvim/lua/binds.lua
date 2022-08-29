@@ -29,20 +29,6 @@ map('n', '<leader>p', '*y', {noremap=true})
 map('n', '<leader>+', ':vertical resize +5<CR>', {noremap=true})
 map('n', '<leader>-', ':vertical resize -5<CR>', {noremap=true})
 
-map('n', '<leader>rn', '<Plug>(coc-rename)')
-map('n', '<leader>gh', ':diffget //3<CR>')
-map('n', '<leader>gu', ':diffget //2<CR>')
-map('n', '<leader>gs', ':G<CR>')
-map('n', '<leader>gc', ':G commit<CR>')
-map('n', '<leader>gp', ':G push<CR>')
-
-map('n', '<leader>a', '<Plug>(coc-codeaction-selected)')
-map('n', '<leader>ac', '<Plug>(coc-codeaction)')
-map('n', '<leader>qf', '<Plug>(coc-fix-current)')
-map('n', '<leader>f', '<Plug>(coc-format-selected)')
-map('x', '<leader>f', '<Plug>(coc-format-selected)')
-
-
 -- control
 
 map('n', '<C-p>', '<cmd>Telescope find_files<cr>', {noremap=true})
@@ -50,7 +36,11 @@ map('n', '<C-s>', ':w', {noremap=true})
 map('n', '<C-G>', '<cmd>Telescope live_grep<cr>', {noremap=true})
 map('n', '<C-s>', ':w', {noremap=true})
 
-map('n', '<C-n>', ':NERDTreeToggle<CR>')
+map('n', '<C-n>', ':NvimTreeToggle<CR>')
+
+-- remap ctrl + u/d to shift + up/down
+map('n', '<S-up>', '<C-u>', {noremap=true})
+map('n', '<S-down>', '<C-d>', {noremap=true})
 
 -- others
 
@@ -68,9 +58,6 @@ map('n', '<silent> C-n', '<cmd>lua vim.diagnostic.goto_prev<CR>')
 map('n', '<silent> C-p', '<cmd>lua vim.diagnostic.goto_next()<CR>')
 
 local on_attach = function(client, bufnr)
-	-- Enable completion triggered by <c-x><c-o>
-	vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-
 	-- Mappings.
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	local bufopts = { noremap=true, silent=true, buffer=bufnr }
@@ -90,4 +77,3 @@ local on_attach = function(client, bufnr)
 	map('n', 'gr', vim.lsp.buf.references, bufopts)
 	map('n', '<space>f', vim.lsp.buf.formatting, bufopts)
 end
-

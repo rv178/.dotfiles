@@ -24,33 +24,40 @@ packer.init({
 })
 
 local plugins = function(use)
-	use("tpope/vim-fugitive")
-	use("airblade/vim-gitgutter")
-	use("Xuyuanp/nerdtree-git-plugin")
-
+	use("wbthomason/packer.nvim")
 	use("lewis6991/impatient.nvim")
+
 	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
-	use("scrooloose/nerdtree")
-	use("scrooloose/nerdcommenter")
-	use("prettier/vim-prettier", {["run"] = "yarn install"})
+
 	use("github/copilot.vim")
-	use("steelsojka/pears.nvim")
-	use("andweeb/presence.nvim")
-
 	use("arcticicestudio/nord-vim")
+	use("airblade/vim-gitgutter")
 	use("vim-airline/vim-airline")
-	use("vim-airline/vim-airline-themes")
-	use("ryanoasis/vim-devicons")
-	use("ap/vim-css-color")
-	use("psliwka/vim-smoothie")
+	use({
+	'kyazdani42/nvim-tree.lua',
+	requires = {
+		'kyazdani42/nvim-web-devicons', -- optional, for file icons
+		},
+	})
 
+	use("steelsojka/pears.nvim")
+	use("scrooloose/nerdcommenter")
 	use("neovim/nvim-lspconfig")
-	use("hrsh7th/nvim-cmp")
-	use("hrsh7th/cmp-nvim-lsp")
-	use("saadparwaiz1/cmp_luasnip")
-	use ("L3MON4D3/LuaSnip")
+	use("L3MON4D3/LuaSnip")
+	use('nvim-treesitter/nvim-treesitter')
+	use({
+	"hrsh7th/nvim-cmp",
+	requires = {
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-nvim-lua",
+			"hrsh7th/cmp-buffer",
+			"saadparwaiz1/cmp_luasnip",
+		},
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()
