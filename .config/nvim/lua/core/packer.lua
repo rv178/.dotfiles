@@ -1,20 +1,6 @@
 local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 
-packer_cmds = {
-  "PackerSnapshot",
-  "PackerSnapshotRollback",
-  "PackerSnapshotDelete",
-  "PackerInstall",
-  "PackerUpdate",
-  "PackerSync",
-  "PackerClean",
-  "PackerCompile",
-  "PackerStatus",
-  "PackerProfile",
-  "PackerLoad",
-}
-
 if fn.empty(fn.glob(install_path)) > 0 then
 	packer_bootstrap = fn.system({
 		"git",
@@ -39,10 +25,7 @@ packer.init({
 })
 
 local plugins = function(use)
-	use({
-		"wbthomason/packer.nvim",
-		cmd = packer_cmds,
-	})
+	use("wbthomason/packer.nvim")
 	use("lewis6991/impatient.nvim")
 
 	-- required for telescope
@@ -80,10 +63,6 @@ local plugins = function(use)
 	})
 	-- auto comment on keybind
 	use("scrooloose/nerdcommenter")
-	use({
-		"lukas-reineke/indent-blankline.nvim",
-		config = "require('plugins.settings.others.blankline()')"
-	})
 	-- treesitter
 	use({
 		'nvim-treesitter/nvim-treesitter',
