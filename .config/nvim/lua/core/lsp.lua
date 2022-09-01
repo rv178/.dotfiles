@@ -2,6 +2,7 @@ vim.g.completeopt='menu,menuone,noselect'
 
 -- nvim-cmp setup
 local cmp = require'cmp'
+
 cmp.setup({
 	window = {
 		--completion = cmp.config.window.bordered(),

@@ -1,5 +1,3 @@
+require('impatient').enable_profile()
+require("core")
 require("plugins")
-require("general")
-require("binds")
-require("lsp")
-require("impatient").enable_profile()
