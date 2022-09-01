@@ -80,6 +80,10 @@ local plugins = function(use)
 	})
 	-- auto comment on keybind
 	use("scrooloose/nerdcommenter")
+	use({
+		"lukas-reineke/indent-blankline.nvim",
+		config = "require('plugins.settings.others.blankline()')"
+	})
 	-- treesitter
 	use({
 		'nvim-treesitter/nvim-treesitter',
