@@ -1,9 +1,9 @@
 HOME = vim.fn.getenv("HOME")
 
 vim.cmd("syntax on")
-vim.cmd("colorscheme nord")
 vim.opt.completeopt = {"menuone","noselect"}
 vim.opt.relativenumber = true
+vim.opt.tgc = true
 vim.opt.nu = true
 vim.opt.encoding = "UTF-8"
 vim.opt.smarttab = true
@@ -26,15 +26,19 @@ vim.opt.title = true
 vim.wo.wrap = false
 
 vim.cmd([[
-augroup mygroup
-autocmd!
-	autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
-	autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
-	autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_sync(nil, 100)
-	autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_sync(nil, 100)
-	autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 100)
-	autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
-	autocmd BufWritePre *.html lua vim.lsp.buf.formatting_sync(nil, 100)
-	autocmd BufWritePre *.css lua vim.lsp.buf.formatting_sync(nil, 100)
-augroup end
+autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.html lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.css lua vim.lsp.buf.formatting_sync(nil, 100)
+
+au colorscheme * highlight Normal		ctermbg=NONE guibg=NONE
+au colorscheme * highlight NonText		ctermbg=NONE guibg=NONE
+au colorscheme * highlight Text			ctermbg=NONE guibg=NONE
+au colorscheme * highlight LineNr		ctermbg=NONE guibg=NONE
+au colorscheme * highlight CursorLineNR	ctermbg=NONE guibg=NONE
+au colorscheme * highlight SignColumn	ctermbg=NONE guibg=NONE
 ]])

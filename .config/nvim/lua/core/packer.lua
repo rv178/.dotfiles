@@ -1,6 +1,20 @@
 local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 
+packer_cmds = {
+  "PackerSnapshot",
+  "PackerSnapshotRollback",
+  "PackerSnapshotDelete",
+  "PackerInstall",
+  "PackerUpdate",
+  "PackerSync",
+  "PackerClean",
+  "PackerCompile",
+  "PackerStatus",
+  "PackerProfile",
+  "PackerLoad",
+}
+
 if fn.empty(fn.glob(install_path)) > 0 then
 	packer_bootstrap = fn.system({
 		"git",
@@ -25,29 +39,58 @@ packer.init({
 })
 
 local plugins = function(use)
-	use("wbthomason/packer.nvim")
+	use({
+		"wbthomason/packer.nvim",
+		cmd = packer_cmds,
+	})
 	use("lewis6991/impatient.nvim")
 
+	-- required for telescope
 	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
 
 	use("github/copilot.vim")
-	use("arcticicestudio/nord-vim")
+	-- nord theme
+	use({
+		"arcticicestudio/nord-vim",
+		config = "vim.cmd('colorscheme nord')"
+	})
+	-- git plugin for showing changes in sidebar
 	use("airblade/vim-gitgutter")
-	use("vim-airline/vim-airline")
+	-- status bar + tabline
+	use({
+		"nvim-lualine/lualine.nvim",
+		config = "require('plugins.settings.lualine')"
+	})
+	-- tree plugin for viewing project tree
 	use({
 	'kyazdani42/nvim-tree.lua',
-	requires = {
-		'kyazdani42/nvim-web-devicons', -- optional, for file icons
+		requires = {
+			'kyazdani42/nvim-web-devicons', -- optional, for file icons
 		},
+		cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+		config = "require('plugins.settings.nvimtree')"
 	})
-
-	use("windwp/nvim-autopairs")
+	-- bracket autocompletion
+	use({
+		"windwp/nvim-autopairs",
+		after = "nvim-cmp",
+		config = "require('plugins.settings.autopairs')"
+	})
+	-- auto comment on keybind
 	use("scrooloose/nerdcommenter")
+	-- treesitter
+	use({
+		'nvim-treesitter/nvim-treesitter',
+		run = ":TSUpdate",
+		event = "BufWinEnter",
+		config = "require('plugins.settings.treesitter')"
+	})
+	-- lsp stuff
 	use("neovim/nvim-lspconfig")
-	use("L3MON4D3/LuaSnip")
-	use('nvim-treesitter/nvim-treesitter')
+	use({"L3MON4D3/LuaSnip"})
+	-- auto completion/suggestions
 	use({
 	"hrsh7th/nvim-cmp",
 	requires = {
@@ -55,7 +98,6 @@ local plugins = function(use)
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-nvim-lua",
-			"hrsh7th/cmp-buffer",
 			"saadparwaiz1/cmp_luasnip",
 		},
 	})
