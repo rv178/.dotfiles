@@ -3,7 +3,6 @@ HOME = vim.fn.getenv("HOME")
 vim.cmd("syntax on")
 vim.opt.completeopt = {"menuone","noselect"}
 vim.opt.relativenumber = true
-vim.opt.tgc = true
 vim.opt.nu = true
 vim.opt.encoding = "UTF-8"
 vim.opt.smarttab = true
@@ -34,11 +33,15 @@ autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.html lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.css lua vim.lsp.buf.formatting_sync(nil, 100)
-
-au colorscheme * highlight Normal		ctermbg=NONE guibg=NONE
-au colorscheme * highlight NonText		ctermbg=NONE guibg=NONE
-au colorscheme * highlight Text			ctermbg=NONE guibg=NONE
-au colorscheme * highlight LineNr		ctermbg=NONE guibg=NONE
-au colorscheme * highlight CursorLineNR	ctermbg=NONE guibg=NONE
-au colorscheme * highlight SignColumn	ctermbg=NONE guibg=NONE
 ]])
+
+-- theme settings
+
+vim.g.nord_contrast = true
+vim.g.nord_borders = false
+vim.g.nord_disable_background = true
+vim.g.nord_italic = true
+vim.g.nord_uniform_diff_background = true
+
+-- Load the colorscheme
+require('nord').set()

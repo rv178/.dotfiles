@@ -36,8 +36,8 @@ local plugins = function(use)
 	use("github/copilot.vim")
 	-- nord theme
 	use({
-		"arcticicestudio/nord-vim",
-		config = "vim.cmd('colorscheme nord')"
+		"shaunsingh/nord.nvim",
+		config = "vim.cmd[[colorscheme nord]]"
 	})
 	-- git plugin for showing changes in sidebar
 	use("airblade/vim-gitgutter")
