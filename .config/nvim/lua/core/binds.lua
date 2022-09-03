@@ -29,6 +29,9 @@ map('n', '<leader>p', '*y', {noremap=true})
 map('n', '<leader>+', ':vertical resize +5<CR>', {noremap=true})
 map('n', '<leader>-', ':vertical resize -5<CR>', {noremap=true})
 
+map('n', '<leader>l', ':bnext<CR>')
+map('n', '<leader>h', ':bprev<CR>')
+
 -- control
 
 map('n', '<C-p>', '<cmd>Telescope find_files<cr>', {noremap=true})
@@ -41,6 +44,8 @@ map('n', '<C-n>', ':NvimTreeToggle<CR>')
 -- remap ctrl + u/d to shift + up/down
 map('n', '<S-up>', '<C-u>', {noremap=true})
 map('n', '<S-down>', '<C-d>', {noremap=true})
+map('v', '<S-up>', '<C-u>', {noremap=true})
+map('v', '<S-down>', '<C-d>', {noremap=true})
 
 -- others
 
@@ -56,6 +61,7 @@ map('n', '<silent> K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 map('n', '<silent> C-k', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
 map('n', '<silent> C-n', '<cmd>lua vim.diagnostic.goto_prev<CR>')
 map('n', '<silent> C-p', '<cmd>lua vim.diagnostic.goto_next()<CR>')
+
 
 local on_attach = function(client, bufnr)
 	-- Mappings.
