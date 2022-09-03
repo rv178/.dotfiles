@@ -55,13 +55,6 @@ map('n', '<esc>', ':noh<cr>', {noremap=true})
 
 map('n', 'cc', '<Plug>NERDCommenterToggle')
 map('v', 'cc', '<Plug>NERDCommenterToggle')
-map('n', '<silent> gr', '<cmd>lua vim.lsp.buf.references()<CR>')
-map('n', '<silent> gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
-map('n', '<silent> K', '<cmd>lua vim.lsp.buf.hover()<CR>')
-map('n', '<silent> C-k', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
-map('n', '<silent> C-n', '<cmd>lua vim.diagnostic.goto_prev<CR>')
-map('n', '<silent> C-p', '<cmd>lua vim.diagnostic.goto_next()<CR>')
-
 
 local on_attach = function(client, bufnr)
 	-- Mappings.
