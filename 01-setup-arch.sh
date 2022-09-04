@@ -27,10 +27,6 @@ do
 	sudo aura -Acax --noconfirm $aur_pkg
 done
 
-# Install vim-plug
-echo -e "[${Gre}+${Whi}] Installing vim-plug"
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 # Setup ZSH
 echo -e "[${Gre}*${Whi}] Setting up ZSH plugins"
 mkdir -p ~/.zsh
