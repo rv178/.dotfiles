@@ -22,6 +22,7 @@ bindkey '^e' edit-command-line
 
 # Aliases
 alias zshrc='nvim ~/.zshrc'
+alias zpr='nvim ~/.zprofile'
 alias recordcam='ffmpeg -f v4l2 -framerate 60 -i /dev/video0 cam-out.mp4'
 alias takephoto='ffmpeg -f video4linux2 -i /dev/video0 -vframes 1  test.png'
 alias qsession='pkill -KILL -u $USER'
@@ -37,7 +38,6 @@ alias ga='git add .'
 alias gma='git commit -aS'
 alias gp='git push'
 alias gpull='git pull'
-alias fnd='findfile=$(find . | fzf) && nvim $findfile'
 alias swhkdrc='nvim ~/.config/swhkd/swhkdrc'
 alias loadnvm='export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.config/nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'

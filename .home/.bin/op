@@ -1,0 +1,1 @@
+nvim $(fd | fzf --preview 'bat --theme=Nord --style=numbers --color=always --line-range :500 {}')
