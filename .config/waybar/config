@@ -37,7 +37,7 @@
 		"num-tags": 7
 	},
 	"temperature": {
-		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+		"hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
 		"format": "{temperatureC}°C "
 	},
 	"river/window": {
