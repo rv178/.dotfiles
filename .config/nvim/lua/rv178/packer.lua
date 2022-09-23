@@ -84,6 +84,10 @@ local plugins = function(use)
 			"saadparwaiz1/cmp_luasnip",
 		},
 	})
+	use({
+		"andweeb/presence.nvim",
+		config = "require('plugins.settings.presence')"
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()
