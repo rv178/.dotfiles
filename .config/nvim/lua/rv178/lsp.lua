@@ -35,7 +35,7 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 local lspconfig = require('lspconfig')
 
 -- enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'bashls', 'rust_analyzer', 'pyright', 'tsserver' }
+local servers = { 'bashls', 'rust_analyzer', 'pyright', 'tsserver', 'gopls' }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup {
 		capabilities = capabilities,
