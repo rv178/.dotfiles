@@ -10,7 +10,6 @@ export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
 export GTK_USE_PORTAL=0
 export GDK_BACKEND=wayland
 export LEIN_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/lein"
-export LESSHISTFILE="-"
 export MOZ_ENABLE_WAYLAND=1
 export SDL_VIDEODRIVER=x11
 export QT_QPA_PLATFORM=wayland
