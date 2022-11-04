@@ -37,8 +37,9 @@
 		"num-tags": 7
 	},
 	"temperature": {
-		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-		"format": "{temperatureC}°C "
+		"hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+		"format": "{temperatureC}°C ",
+		"on-click": ""
 	},
 	"river/window": {
 		"format": "{}",
@@ -48,7 +49,8 @@
 		"device": "amdgpu_b10",
 		"format": "{icon}  {}%",
 		"format-icons": ["", ""],
-		"interval": 1
+		"interval": 1,
+		"on-click": ""
 	},
 	"battery": {
 		"states": {
@@ -60,7 +62,7 @@
 		"format-charging": "{icon}   {capacity}%",
 		"format-plugged": "{icon}   {capacity}%",
 		"format-alt": "{time} {icon}",
-		"format-icons": ["", "", "", "", ""]
+		"format-icons": ["", "", "", "", ""],
 	},
 	"tray":{
 		"icon-size":18,
@@ -72,12 +74,14 @@
 		"interval": 1,
 		"return-type": "string",
 		"exec": "~/.config/waybar/modules/datetime.sh",
-		"tooltip": false
+		"tooltip": false,
+		"on-click": ""
 	},
 	"custom/cpu": {
 		"interval": 1,
 		"return-type": "string",
 		"exec": "~/.config/waybar/modules/cpu.sh",
-		"tooltip": false
+		"tooltip": false,
+		"on-click": ""
 	},
 }

@@ -115,8 +115,8 @@ riverctl map normal $mod+Shift+Mod1 H  send-layout-cmd rivertile "main-location 
 for mode in normal locked
 do
     # Control volume with amixer
-    riverctl map $mode None XF86AudioRaiseVolume  spawn 'amixer set Master 5%+'
-    riverctl map $mode None XF86AudioLowerVolume  spawn 'amixer set Master 5%-'
+    riverctl map $mode None XF86AudioRaiseVolume  spawn 'amixer -D pulse set Master 5%+'
+    riverctl map $mode None XF86AudioLowerVolume  spawn 'amixer -D pulse set Master 5%-'
     riverctl map $mode None XF86AudioMute         spawn 'amixer -D pulse set Master 1+ toggle'
 
     # Control MPRIS aware media players with playerctl
