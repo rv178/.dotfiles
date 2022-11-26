@@ -27,7 +27,7 @@ alias recordcam='ffmpeg -f v4l2 -framerate 60 -i /dev/video0 cam-out.mp4'
 alias takephoto='ffmpeg -f video4linux2 -i /dev/video0 -vframes 1  test.png'
 alias qsession='pkill -KILL -u $USER'
 alias q='exit'
-alias cat='bat --theme Nord'
+alias cat='bat --theme Nord -p'
 alias l='exa -lahF --color=always --icons --sort=size --group-directories-first'
 alias ls='ls -lahF --color=always'
 alias c='clear'
@@ -41,6 +41,7 @@ alias gpull='git pull'
 alias swhkdrc='nvim ~/.config/swhkd/swhkdrc'
 alias loadnvm='export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.config/nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
+alias pm="passmenu"
 
 # Load on startup
 _startup() {
