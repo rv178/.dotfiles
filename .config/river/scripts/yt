@@ -1,0 +1,2 @@
+rofi=$(rofi -dmenu -p "Enter handler:" )
+mpv $(latest $rofi)

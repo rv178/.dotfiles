@@ -1,0 +1,10 @@
+#!/bin/sh
+
+rss_url=$(curl -s https://www.youtube.com/@${1} | htmlq --attribute href link | grep feeds)
+latest=$(curl -s $rss_url | grep videoId | head -n 1 | cut -d '>' -f 2 | cut -d '<' -f 1)
+
+url="https://youtu.be/"
+url+=$latest
+
+echo $url
+wl-copy $url

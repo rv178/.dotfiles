@@ -15,6 +15,9 @@ riverctl map normal $mod B spawn "killall -SIGUSR1 waybar"
 # Open rofi
 riverctl map normal $mod C spawn "rofi -show drun -show-icons -display-drun \"Search\""
 
+# Latest youtube videos!!!
+riverctl map normal $mod Y spawn "~/.config/river/scripts/yt"
+
 # Dmenu, incase rofi fails
 riverctl map normal $mod+Shift C spawn "dmenu_run"
 
