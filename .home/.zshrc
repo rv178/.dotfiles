@@ -42,6 +42,7 @@ alias swhkdrc='nvim ~/.config/swhkd/swhkdrc'
 alias loadnvm='export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.config/nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
 alias pm="passmenu"
+alias py="python"
 
 # Load on startup
 _startup() {
