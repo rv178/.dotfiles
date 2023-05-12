@@ -7,11 +7,11 @@
 		"tooltip": false,
 		"scroll-step": 5,
 		"format": "{icon}  {volume}%",
-		"format-muted": "婢  0%",
+		"format-muted": "󰝟  0%",
 		"on-click":"amixer -D pulse Master 1+ toggle",
 		"scroll-step": 5,
 		"format-icons": {
-			"default": ["", "", ""]
+			"default": ["", "󰖀", "󰕾"]
 		}
 	},
 	"custom/powermenu": {
@@ -27,7 +27,7 @@
 		"tag-labels":[
 			"",
 			"",
-			"ﭮ",
+			"󰙯",
 			"",
 			"",
 			"",
