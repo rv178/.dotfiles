@@ -1,4 +1,6 @@
 /.config/nvim/lua/plugins/packer_compiled.lua
+/.config/ranger/colorschemes/__pycache__/
+/.config/ranger/plugins/__pycache__/
 /.config/btop/btop.log
 /.home/.bin/d7
 /.home/.bin/ngrok

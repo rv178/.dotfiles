@@ -43,6 +43,7 @@ alias loadnvm='export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HO
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
 alias pm="passmenu"
 alias py="python"
+alias py39="/usr/local/bin/python3.9"
 
 # Load on startup
 _startup() {

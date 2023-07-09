@@ -24,6 +24,6 @@ do
 done
 
 killall swaybg
-swaybg -i ~/.dotfiles/.assets/wallpapers/ign_beyondHillAndDale.jpg
+swaybg -i ~/.dotfiles/.assets/wallpapers/spiderman-falling.png -m fill
 
 ~/.config/scripts/updates.sh
