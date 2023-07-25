@@ -21,7 +21,7 @@ export GOPROXY=direct
 export LESSHISTFILE="-"
 
 export EDITOR=nvim
-export MANPAGER="sh -c 'col -bx | bat --theme Nord -l man -p'"
+export MANPAGER="bat --theme Nord -l man -p'"
 
 [[ -d "$HOME/.bin" ]] && PATH="$HOME/.bin:$PATH"
 [[ -d "$HOME/.local/bin" ]] && PATH="$HOME/.local/bin:$PATH"

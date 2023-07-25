@@ -33,6 +33,13 @@ riverctl map normal $mod+Shift R spawn "~/.config/river/init"
 # Close the focused window
 riverctl map normal $mod Q close
 
+
+# Change output
+riverctl map normal $mod O spawn "riverctl focus-output next"
+# Send to next output
+riverctl map normal $mod+Shift O spawn "riverctl send-to-output next"
+
+
 # Exit river
 riverctl map normal $mod+Shift Q exit
 
