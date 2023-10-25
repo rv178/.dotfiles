@@ -1,10 +1,31 @@
-#!/bin/sh
+#!/bin/zsh
 
 rss_url=$(curl -s https://www.youtube.com/@${1} | htmlq --attribute href link | grep feeds)
-latest=$(curl -s $rss_url | grep videoId | head -n 1 | cut -d '>' -f 2 | cut -d '<' -f 1)
 
-url="https://youtu.be/"
-url+=$latest
+links=()
+names=()
 
-echo $url
-wl-copy $url
+for ((i = 1; i <= 8; i++)); do
+	links+=$(curl -s $rss_url | grep videoId | head -n $i | cut -d '>' -f 2 | cut -d '<' -f 1 | tail -n 1)
+	names+=$(curl -s $rss_url | grep media:title | head -n $i | cut -d '>' -f 2 | cut -d '<' -f 1 | tail -n 1)
+done
+
+opt_str=$(printf "%s\n" "${names[@]}")
+
+sel_opt=$(echo -e "$opt_str" | rofi -dmenu -p "Search: ")
+
+if [ -n "$sel_opt" ]; then
+	index=1
+	for name in "${names[@]}"; do
+		if [ $name = $sel_opt ]; then
+			break
+		fi
+		((index++))
+	done
+
+	url="https://youtu.be/"
+	url+=${links[index]}
+
+	echo $url
+	wl-copy $url
+fi

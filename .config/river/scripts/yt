@@ -1,2 +1,3 @@
 rofi=$(rofi -dmenu -p "Enter handler:" )
-mpv $(latest $rofi)
+vid=$(latest $rofi)
+mpv $vid
