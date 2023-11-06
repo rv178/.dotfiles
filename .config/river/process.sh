@@ -27,3 +27,4 @@ killall swaybg
 swaybg -i ~/.dotfiles/.assets/wallpapers/spiderman-falling.png -m fill
 
 ~/.config/scripts/updates.sh
+~/.config/scripts/bday.sh

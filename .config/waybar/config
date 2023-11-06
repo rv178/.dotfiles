@@ -23,18 +23,27 @@
 		"signal": 8
 	},
 
+
+	"custom/spotify": {
+		"format": "{icon}  {}",
+		"format-icons": ["", ""],
+		"return-type": "json",
+		"max-length": 10,
+		"exec": "spotifatius monitor",
+		"on-click-right": "spotifatius toggle-liked",
+	},
+
 	"river/tags": {
 		"tag-labels":[
-			"",
-			"",
-			"󰙯",
-			"",
-			"",
-			"",
-			""
+			"1",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6",
 		],
 		"disable-click": false,
-		"num-tags": 7
+		"num-tags": 6
 	},
 	"temperature": {
 		"hwmon-path-abs": "/sys/class/hwmon",
@@ -43,7 +52,7 @@
 		"on-click": ""
 	},
 	"river/window": {
-		"format": "{}",
+		"format": "  {}",
 		"max-length": 90
 	},
 	"backlight": {

@@ -87,7 +87,7 @@ riverctl map-pointer normal $mod BTN_LEFT move-view
 # Mod + Right Mouse Button to resize views
 riverctl map-pointer normal $mod BTN_RIGHT resize-view
 
-for i in $(seq 1 7)
+for i in $(seq 1 6)
 do
     tags=$((1 << ($i - 1)))
 

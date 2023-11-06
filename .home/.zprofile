@@ -23,6 +23,10 @@ export LESSHISTFILE="-"
 export EDITOR=nvim
 export MANPAGER="bat --theme Nord -l man -p'"
 
+# spotifatius config
+export RSPOTIFY_CLIENT_SECRET=`cat $HOME/extras/misc/stuffz/sp_client_secret`
+export RSPOTIFY_CLIENT_ID=`cat $HOME/extras/misc/stuffz/sp_client_id`
+
 [[ -d "$HOME/.bin" ]] && PATH="$HOME/.bin:$PATH"
 [[ -d "$HOME/.local/bin" ]] && PATH="$HOME/.local/bin:$PATH"
 [[ -d "/usr/local/share/go/bin" ]] && PATH="/usr/local/share/go/bin:$PATH"

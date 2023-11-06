@@ -33,7 +33,6 @@ local plugins = function(use)
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
 
-	use("github/copilot.vim")
 	-- nord theme
 	use({
 		"shaunsingh/nord.nvim",
