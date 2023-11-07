@@ -71,7 +71,6 @@
 		"format": "{icon}  {capacity}%",
 		"format-charging": "{icon}   {capacity}%",
 		"format-plugged": "{icon}   {capacity}%",
-		"format-alt": "{time} {icon}",
 		"format-icons": ["", "", "", "", ""],
 	},
 	"tray":{
