@@ -47,7 +47,7 @@ local plugins = function(use)
 	})
 	-- tree plugin for viewing project tree
 	use({
-	'kyazdani42/nvim-tree.lua',
+	"kyazdani42/nvim-tree.lua",
 		requires = {
 			'kyazdani42/nvim-web-devicons', -- optional, for file icons
 		},
@@ -64,7 +64,7 @@ local plugins = function(use)
 	use("scrooloose/nerdcommenter")
 	-- treesitter
 	use({
-		'nvim-treesitter/nvim-treesitter',
+		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 		event = "BufWinEnter",
 		config = "require('plugins.settings.treesitter')"
@@ -72,6 +72,7 @@ local plugins = function(use)
 	-- lsp stuff
 	use("neovim/nvim-lspconfig")
 	use({"L3MON4D3/LuaSnip"})
+	use({"lukas-reineke/indent-blankline.nvim"})
 	-- auto completion/suggestions
 	use({
 	"hrsh7th/nvim-cmp",
