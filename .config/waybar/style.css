@@ -148,6 +148,7 @@ window#waybar.hidden {
 	border-radius: 5px;
 	transition: none;
 	padding: 10px 10px;
+	padding-right: 15px;
 
 	color: #EBCB8B;
 	background: #2E3440;

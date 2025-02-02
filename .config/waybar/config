@@ -47,7 +47,7 @@
 		"num-tags": 7
 	},
 	"temperature": {
-		"hwmon-path-abs": "/sys/class/hwmon",
+		"hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
 		"input-filename": "temp1_input",
 		"format": "{temperatureC}°C ",
 		"on-click": ""
@@ -58,7 +58,7 @@
 	},
 	"backlight": {
 		"device": "amdgpu_b10",
-		"format": "{icon}  {}%",
+		"format": "{}% {icon}",
 		"format-icons": ["", ""],
 		"interval": 1,
 		"on-click": ""

@@ -27,6 +27,7 @@ export EDITOR=nvim
 export MANPAGER="bat --theme Nord -l man -p'"
 
 export GDK_DPI_SCALE=1.3
+export GDK_SCALE=1.3
 
 # spotifatius config
 #export RSPOTIFY_CLIENT_SECRET=`cat $HOME/extras/misc/stuffz/sp_client_secret`
