@@ -29,6 +29,8 @@ export MANPAGER="bat --theme Nord -l man -p'"
 export GDK_DPI_SCALE=1.3
 export GDK_SCALE=1.3
 
+export RUSTC_WRAPPER=sccache
+
 # spotifatius config
 #export RSPOTIFY_CLIENT_SECRET=`cat $HOME/extras/misc/stuffz/sp_client_secret`
 #export RSPOTIFY_CLIENT_ID=`cat $HOME/extras/misc/stuffz/sp_client_id`
