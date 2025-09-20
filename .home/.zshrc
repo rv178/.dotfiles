@@ -1,4 +1,5 @@
 #eval "$(starship init zsh)"
+eval "$(fnm env --use-on-cd --shell zsh)"
 # The prompt
 export PROMPT="%F{red}%n%f:%F{cyan}%m%f"$'\n'"%F{cyan} %B%30<..<%~%b %F{red}❯❯ "
 # export PROMPT="%F{cyan} %B%30<..<%~%b %F{red}❯❯ "
