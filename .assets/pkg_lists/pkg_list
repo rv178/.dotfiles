@@ -1,7 +1,7 @@
 git
 neovim
 ranger
-neofetch
+fastfetch
 brightnessctl
 wl-clipboard
 zsh
@@ -46,3 +46,4 @@ unrar
 alsa-utils
 river
 gcr
+wlsunset

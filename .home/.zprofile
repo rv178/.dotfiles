@@ -31,6 +31,12 @@ export GDK_SCALE=1.3
 
 export RUSTC_WRAPPER=sccache
 
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
 # spotifatius config
 #export RSPOTIFY_CLIENT_SECRET=`cat $HOME/extras/misc/stuffz/sp_client_secret`
 #export RSPOTIFY_CLIENT_ID=`cat $HOME/extras/misc/stuffz/sp_client_id`
