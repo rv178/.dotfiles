@@ -1,9 +1,10 @@
-rofiopt="Normal\nSwappy"
+rofiopt="Normal\nSwappy\nQR Code"
 rofi=$(printf "$rofiopt" | rofi -dmenu -i -p "Screenshot")
 [ -z "$rofi" ] && exit
 
 case $rofi in
 	"Normal") wayshot -s "$(slurp -f '%x %y %w %h')" --stdout | wl-copy;;
 	"Swappy") wayshot -s "$(slurp -f '%x %y %w %h')" --stdout | swappy -f -;;
+	"QR Code") wayshot -s "$(slurp -f '%x %y %w %h')" --stdout | zbarimg -q --raw - | wl-copy;;
 	*)
 esac

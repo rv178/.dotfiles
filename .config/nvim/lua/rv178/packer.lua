@@ -27,6 +27,7 @@ packer.init({
 local plugins = function(use)
 	use("wbthomason/packer.nvim")
 	use("lewis6991/impatient.nvim")
+	use("Aietes/esp32.nvim")
 
 	-- required for telescope
 	use("nvim-lua/popup.nvim")
