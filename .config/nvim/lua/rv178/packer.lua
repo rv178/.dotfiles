@@ -27,7 +27,6 @@ packer.init({
 local plugins = function(use)
 	use("wbthomason/packer.nvim")
 	use("lewis6991/impatient.nvim")
-	use("Aietes/esp32.nvim")
 
 	-- required for telescope
 	use("nvim-lua/popup.nvim")
@@ -39,8 +38,10 @@ local plugins = function(use)
 		"shaunsingh/nord.nvim",
 		config = "vim.cmd[[colorscheme nord]]"
 	})
+
 	-- git plugin for showing changes in sidebar
 	use("airblade/vim-gitgutter")
+
 	-- status bar + tabline
 	use({
 		"nvim-lualine/lualine.nvim",
@@ -55,14 +56,17 @@ local plugins = function(use)
 		--cmd = { "NvimTreeToggle", "NvimTreeFocus" },
 		--config = "require('plugins.settings.nvimtree')"
 	--})
+	
 	-- bracket autocompletion
 	use({
 		"windwp/nvim-autopairs",
 		after = "nvim-cmp",
 		config = "require('plugins.settings.autopairs')"
 	})
+
 	-- auto comment on keybind
 	use("scrooloose/nerdcommenter")
+
 	-- treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -70,10 +74,12 @@ local plugins = function(use)
 		event = "BufWinEnter",
 		config = "require('plugins.settings.treesitter')"
 	})
+
 	-- lsp stuff
 	use("neovim/nvim-lspconfig")
 	use({"L3MON4D3/LuaSnip"})
 	use({"lukas-reineke/indent-blankline.nvim"})
+
 	-- auto completion/suggestions
 	use({
 	"hrsh7th/nvim-cmp",
@@ -85,9 +91,24 @@ local plugins = function(use)
 			"saadparwaiz1/cmp_luasnip",
 		},
 	})
+
+	-- discord rpc
 	use({
 		"andweeb/presence.nvim",
 		config = "require('plugins.settings.presence')"
+	})
+
+	-- markdown preview
+	use({
+		'toppair/peek.nvim',
+		run = 'deno task --quiet build:fast',
+		config = "require('plugins.settings.peek')"
+	})
+
+	-- highlight colours
+	use({
+		'brenoprata10/nvim-highlight-colors',
+		config = "require('plugins.settings.highlight')"
 	})
 
 	if packer_bootstrap then

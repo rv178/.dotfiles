@@ -32,6 +32,10 @@ map('n', '<leader>-', ':vertical resize -5<CR>', {noremap=true})
 map('n', '<leader>l', ':bnext<CR>')
 map('n', '<leader>h', ':bprev<CR>')
 
+-- markdown live preview
+map('n', '<leader>po', ":lua require('peek').open()<CR>", {noremap=true}) -- open
+map('n', '<leader>pc', ":lua require('peek').close()<CR>", {noremap=true}) -- close
+
 -- control
 
 map('n', '<C-p>', '<cmd>Telescope find_files<cr>', {noremap=true})

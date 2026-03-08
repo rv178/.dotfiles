@@ -23,6 +23,7 @@ vim.opt.signcolumn="yes"
 vim.opt.mouse="a"
 vim.opt.title = true
 vim.wo.wrap = false
+vim.opt.termguicolors = true
 
 vim.cmd([[
 autocmd BufWritePre *.js lua vim.lsp.buf.format(nil, 100)

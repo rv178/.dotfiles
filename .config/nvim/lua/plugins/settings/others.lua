@@ -28,5 +28,3 @@
 
 	--blankline.setup(options)
 --end
-
-require("ibl").setup()

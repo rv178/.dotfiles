@@ -1,3 +1,9 @@
+local present, presence = pcall(require, "presence")
+
+if not present then
+	return
+end
+
 -- The setup config table shows all available config options with their default values:
 require("presence"):setup({
 	-- General options
