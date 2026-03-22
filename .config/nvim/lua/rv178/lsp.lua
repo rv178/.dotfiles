@@ -1,5 +1,17 @@
 vim.g.completeopt='menu,menuone,noselect'
 
+-- diagnostic display config
+vim.diagnostic.config({
+	virtual_text = {
+		prefix = '●',
+		spacing = 2,
+	},
+	signs = true,
+	underline = true,
+	update_in_insert = false,
+	severity_sort = true,
+})
+
 -- nvim-cmp setup
 local cmp = require'cmp'
 
@@ -32,10 +44,19 @@ cmp.setup({
 })
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-local lspconfig = vim.lsp.config
 
--- enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'bashls', 'rust_analyzer', 'pyright', 'ts_ls', 'gopls', 'ccls' }
-for _, lsp in ipairs(servers) do
-	vim.lsp.enable(lsp)
-end
+-- Apply capabilities to all LSP servers via wildcard config
+vim.lsp.config('*', {
+	capabilities = capabilities,
+})
+
+-- enable language servers (configs are in ~/.config/nvim/lsp/)
+local servers = { 'bashls', 'rust_analyzer', 'pyright', 'ts_ls', 'gopls', 'ccls', 'tinymist', 'lua_ls' }
+
+vim.api.nvim_create_autocmd('VimEnter', {
+	callback = function()
+		for _, lsp in ipairs(servers) do
+			vim.lsp.enable(lsp)
+		end
+	end,
+})

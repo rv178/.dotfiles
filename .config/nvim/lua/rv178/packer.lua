@@ -111,6 +111,15 @@ local plugins = function(use)
 		config = "require('plugins.settings.highlight')"
 	})
 
+	-- typst preview
+	use ({
+		'chomosuke/typst-preview.nvim',
+		tag = 'v1.*',
+		config = function()
+		require 'typst-preview'.setup {}
+		end,
+	})
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
