@@ -1,4 +1,3 @@
-dbus-update-activation-environment --all
 killall mako
 mako &
 

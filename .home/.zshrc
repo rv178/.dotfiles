@@ -59,3 +59,4 @@ precmd_functions+=(_startup)
 # Source plugins
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-nix-shell/nix-shell.plugin.zsh
