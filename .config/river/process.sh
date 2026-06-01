@@ -1,5 +1,5 @@
-killall mako
-mako &
+killall fnott
+fnott -c ~/.config/fnott/fnott.ini &
 
 killall waybar
 waybar &
