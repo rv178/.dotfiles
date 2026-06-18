@@ -46,6 +46,24 @@ alias pm="passmenu"
 alias py="python"
 alias ta="tmux attach"
 
+cda() {
+    local dir
+    dir=$(fd --type d --exclude extras/Games | fzf --preview 'tree -C {} | head -n 200')
+    
+    if [[ -n "$dir" ]]; then
+        cd "$dir"
+    fi
+}
+
+op() {
+    local file
+    file=$(fd --type f | fzf --preview 'bat --theme=Nord --style=numbers --color=always --line-range :500 {}')
+    
+    if [[ -n "$file" ]]; then
+        nvim "$file"
+    fi
+}
+
 # Load on startup
 _startup() {
   # Beam shape cursor
