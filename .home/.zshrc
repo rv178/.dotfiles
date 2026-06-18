@@ -48,7 +48,7 @@ alias ta="tmux attach"
 
 cda() {
     local dir
-    dir=$(fd --type d --exclude extras/Games | fzf --preview 'tree -C {} | head -n 200')
+    dir=$(fd --type d --exclude extras/Games -H | fzf --preview 'tree -C {} | head -n 200')
     
     if [[ -n "$dir" ]]; then
         cd "$dir"
@@ -57,7 +57,7 @@ cda() {
 
 op() {
     local file
-    file=$(fd --type f | fzf --preview 'bat --theme=Nord --style=numbers --color=always --line-range :500 {}')
+    file=$(fd --type f -H | fzf --preview 'bat --theme=Nord --style=numbers --color=always --line-range :500 {}')
     
     if [[ -n "$file" ]]; then
         nvim "$file"

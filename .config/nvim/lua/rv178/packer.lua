@@ -94,8 +94,8 @@ local plugins = function(use)
 
 	-- discord rpc
 	use({
-		"andweeb/presence.nvim",
-		config = "require('plugins.settings.presence')"
+		"vyfor/cord.nvim",
+		config = "require('plugins.settings.cord')"
 	})
 
 	-- markdown preview
