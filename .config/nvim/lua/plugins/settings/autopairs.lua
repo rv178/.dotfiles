@@ -4,6 +4,6 @@ if not present then
 	return
 end
 
-require('nvim-autopairs').setup({
+autopairs.setup({
 	disable_filetype = { "TelescopePrompt" , "vim" },
 })

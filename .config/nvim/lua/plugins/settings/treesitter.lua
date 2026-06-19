@@ -4,7 +4,7 @@ if not present then
 	return
 end
 
-require('nvim-treesitter.configs').setup {
+treesitter.setup {
 	-- A list of parser names, or "all"
 	ensure_installed = { "rust" },
 

@@ -5,7 +5,7 @@ if not present then
 end
 
 -- nvim-tree.lua setup
-require("nvim-tree").setup({
+nvimtree.setup({
 	sort_by = "case_sensitive",
 	view = {
 		adaptive_size = false,

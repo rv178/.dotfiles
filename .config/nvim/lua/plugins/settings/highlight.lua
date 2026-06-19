@@ -4,7 +4,7 @@ if not present then
 	return
 end
 
-require("nvim-highlight-colors").setup {
+highlight.setup {
 	---Render style
 	---@usage 'background'|'foreground'|'virtual'
 	render = 'virtual',
