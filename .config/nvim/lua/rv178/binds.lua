@@ -29,8 +29,8 @@ map('n', '<leader>p', '*y', {noremap=true})
 map('n', '<leader>+', ':vertical resize +5<CR>', {noremap=true})
 map('n', '<leader>-', ':vertical resize -5<CR>', {noremap=true})
 
-map('n', '<leader>[', ':bnext<CR>')
-map('n', '<leader>]', ':bprev<CR>')
+map('n', '<leader>]', ':bnext<CR>')
+map('n', '<leader>[', ':bprev<CR>')
 
 -- markdown live preview
 map('n', '<leader>po', ":lua require('peek').open()<CR>", {noremap=true}) -- open
@@ -57,8 +57,9 @@ map('n', 'Y', 'y$', {noremap=true})
 map('n', 'Q', '<Nop>', {noremap=true})
 map('n', '<esc>', ':noh<cr>', {noremap=true})
 
-map('n', 'cc', '<Plug>NERDCommenterToggle')
-map('v', 'cc', '<Plug>NERDCommenterToggle')
+-- built-in commenting (gc/gcc)
+map('n', 'cc', 'gcc', {noremap=false})
+map('x', 'cc', 'gc', {noremap=false})
 
 local on_attach = function(client, bufnr)
 	-- Mappings.

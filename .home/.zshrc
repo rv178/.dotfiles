@@ -57,7 +57,7 @@ cda() {
 
 op() {
     local file
-    file=$(fd --type f -H | fzf --preview 'bat --theme=Nord --style=numbers --color=always --line-range :500 {}')
+    file=$(fd --type f -H --exclude .git | fzf --preview 'bat --theme=Nord --style=numbers --color=always --line-range :500 {}')
     
     if [[ -n "$file" ]]; then
         nvim "$file"

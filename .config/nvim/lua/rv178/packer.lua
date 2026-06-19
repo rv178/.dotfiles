@@ -26,7 +26,6 @@ packer.init({
 
 local plugins = function(use)
 	use("wbthomason/packer.nvim")
-	use("lewis6991/impatient.nvim")
 
 	-- required for telescope
 	use("nvim-lua/popup.nvim")
@@ -56,7 +55,7 @@ local plugins = function(use)
 		--cmd = { "NvimTreeToggle", "NvimTreeFocus" },
 		--config = "require('plugins.settings.nvimtree')"
 	--})
-	
+
 	-- bracket autocompletion
 	use({
 		"windwp/nvim-autopairs",
@@ -64,10 +63,7 @@ local plugins = function(use)
 		config = "require('plugins.settings.autopairs')"
 	})
 
-	-- auto comment on keybind
-	use("scrooloose/nerdcommenter")
-
-	-- treesitter
+-- treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
