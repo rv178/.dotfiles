@@ -29,8 +29,8 @@ map('n', '<leader>p', '*y', {noremap=true})
 map('n', '<leader>+', ':vertical resize +5<CR>', {noremap=true})
 map('n', '<leader>-', ':vertical resize -5<CR>', {noremap=true})
 
-map('n', '<leader>l', ':bnext<CR>')
-map('n', '<leader>h', ':bprev<CR>')
+map('n', '<leader>[', ':bnext<CR>')
+map('n', '<leader>]', ':bprev<CR>')
 
 -- markdown live preview
 map('n', '<leader>po', ":lua require('peek').open()<CR>", {noremap=true}) -- open
