@@ -17,6 +17,9 @@ killall wlsunset
 wlsunset -T 4500 &
 brightnessctl set 20%
 
+killall foot
+foot --server &
+
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile &
 exec rivertile -main-ratio 0.5 -view-padding 2 -outer-padding 2 &
