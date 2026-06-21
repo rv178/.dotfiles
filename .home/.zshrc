@@ -32,7 +32,6 @@ alias cat='bat --theme Nord -p'
 alias l='eza -lahF --color=always --icons --sort=size --group-directories-first'
 alias ls='ls -lahF --color=always'
 alias c='clear'
-alias hst='history 1 -1 | cut -c 8- | sort | uniq | fzf | wl-copy'
 alias gst='git status'
 alias gm='git commit -S'
 alias ga='git add .'
@@ -77,4 +76,4 @@ precmd_functions+=(_startup)
 # Source plugins
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-nix-shell/nix-shell.plugin.zsh
+source ~/.zsh/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh

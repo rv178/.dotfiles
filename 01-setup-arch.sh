@@ -32,6 +32,7 @@ echo -e "[${Gre}*${Whi}] Setting up ZSH plugins"
 mkdir -p ~/.zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+git clone https://github.com/joshskidmore/zsh-fzf-history-search/ ~/.zsh/zsh-fzf-history-search
 
 # Change shell for root
 echo -e "[${Red}*${Whi}] Changing shell for user"
