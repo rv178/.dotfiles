@@ -6,9 +6,11 @@
 ### Wayland dotfiles
 
 -   Compositor: [River](https://github.com/riverwm/river)
+-   Terminal: [Foot](https://codeberg.org/dnkl/foot)
 -   Bar: [Waybar](https://github.com/Alexays/Waybar)
--   Notification daemon: [Mako](https://github.com/emersion/mako)
+-   Notification daemon: [Fnott](https://codeberg.org/dnkl/fnott)
 -   Editor: [NeoVim](https://github.com/neovim/neovim)
+-   Multiplexer: [Tmux](https://github.com/tmux/tmux)
 
 ### Setup
 
