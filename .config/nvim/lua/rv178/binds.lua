@@ -1,5 +1,5 @@
 local function map(mode, combo, mapping, opts)
-	local options = {noremap = true}
+	local options = { noremap = true }
 	if opts then
 		options = vim.tbl_extend('force', options, opts)
 	end
@@ -10,61 +10,61 @@ end
 
 vim.g.mapleader = " "
 
-map('n', '<leader>fb', '<cmd>Telescope buffers<cr>', {noremap=true})
+map('n', '<leader>fb', '<cmd>Telescope buffers<cr>', { noremap = true })
 
-map('n', "<leader>1", "1gt", {noremap=true})
-map('n', "<leader>2", "2gt", {noremap=true})
-map('n', "<leader>3", "3gt", {noremap=true})
-map('n', "<leader>4", "4gt", {noremap=true})
-map('n', "<leader>5", "5gt", {noremap=true})
-map('n', "<leader>6", "6gt", {noremap=true})
-map('n', "<leader>7", "7gt", {noremap=true})
-map('n', "<leader>8", "8gt", {noremap=true})
-map('n', "<leader>9", "9gt", {noremap=true})
-map('n', '<leader>0', ':tablast<cr>', {noremap=true})
+map('n', "<leader>1", "1gt", { noremap = true })
+map('n', "<leader>2", "2gt", { noremap = true })
+map('n', "<leader>3", "3gt", { noremap = true })
+map('n', "<leader>4", "4gt", { noremap = true })
+map('n', "<leader>5", "5gt", { noremap = true })
+map('n', "<leader>6", "6gt", { noremap = true })
+map('n', "<leader>7", "7gt", { noremap = true })
+map('n', "<leader>8", "8gt", { noremap = true })
+map('n', "<leader>9", "9gt", { noremap = true })
+map('n', '<leader>0', ':tablast<cr>', { noremap = true })
 
-map('n', '<leader>p', '*yy', {noremap=true})
-map('n', '<leader>p', '*y', {noremap=true})
+map('n', '<leader>p', '*yy', { noremap = true })
+map('n', '<leader>p', '*y', { noremap = true })
 
-map('n', '<leader>+', ':vertical resize +5<CR>', {noremap=true})
-map('n', '<leader>-', ':vertical resize -5<CR>', {noremap=true})
+map('n', '<leader>+', ':vertical resize +5<CR>', { noremap = true })
+map('n', '<leader>-', ':vertical resize -5<CR>', { noremap = true })
 
 map('n', '<leader>]', ':bnext<CR>')
 map('n', '<leader>[', ':bprev<CR>')
 
 -- markdown live preview
-map('n', '<leader>po', ":lua require('peek').open()<CR>", {noremap=true}) -- open
-map('n', '<leader>pc', ":lua require('peek').close()<CR>", {noremap=true}) -- close
+map('n', '<leader>po', ":lua require('peek').open()<CR>", { noremap = true })  -- open
+map('n', '<leader>pc', ":lua require('peek').close()<CR>", { noremap = true }) -- close
 
 -- control
 
-map('n', '<C-p>', '<cmd>Telescope find_files<cr>', {noremap=true})
-map('n', '<C-s>', ':w', {noremap=true})
-map('n', '<C-G>', '<cmd>Telescope live_grep<cr>', {noremap=true})
-map('n', '<C-s>', ':w', {noremap=true})
+map('n', '<C-p>', '<cmd>Telescope find_files<cr>', { noremap = true })
+map('n', '<C-s>', ':w', { noremap = true })
+map('n', '<C-G>', '<cmd>Telescope live_grep<cr>', { noremap = true })
+map('n', '<C-s>', ':w', { noremap = true })
 
-map('n', '<C-n>', ':NvimTreeToggle<CR>')
+map('n', '<C-n>', ':Neotree toggle right<CR>')
 
 -- remap ctrl + u/d to shift + up/down
-map('n', '<S-up>', '<C-u>', {noremap=true})
-map('n', '<S-down>', '<C-d>', {noremap=true})
-map('v', '<S-up>', '<C-u>', {noremap=true})
-map('v', '<S-down>', '<C-d>', {noremap=true})
+map('n', '<S-up>', '<C-u>', { noremap = true })
+map('n', '<S-down>', '<C-d>', { noremap = true })
+map('v', '<S-up>', '<C-u>', { noremap = true })
+map('v', '<S-down>', '<C-d>', { noremap = true })
 
 -- others
 
-map('n', 'Y', 'y$', {noremap=true})
-map('n', 'Q', '<Nop>', {noremap=true})
-map('n', '<esc>', ':noh<cr>', {noremap=true})
+map('n', 'Y', 'y$', { noremap = true })
+map('n', 'Q', '<Nop>', { noremap = true })
+map('n', '<esc>', ':noh<cr>', { noremap = true })
 
 -- built-in commenting (gc/gcc)
-map('n', 'cc', 'gcc', {noremap=false})
-map('x', 'cc', 'gc', {noremap=false})
+map('n', 'cc', 'gcc', { noremap = false })
+map('x', 'cc', 'gc', { noremap = false })
 
 local on_attach = function(client, bufnr)
 	-- Mappings.
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
-	local bufopts = { noremap=true, silent=true, buffer=bufnr }
+	local bufopts = { noremap = true, silent = true, buffer = bufnr }
 	map('n', 'gD', vim.lsp.buf.declaration, bufopts)
 	map('n', 'gd', vim.lsp.buf.definition, bufopts)
 	map('n', 'K', vim.lsp.buf.hover, bufopts)

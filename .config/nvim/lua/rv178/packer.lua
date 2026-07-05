@@ -28,7 +28,6 @@ local plugins = function(use)
 	use("wbthomason/packer.nvim")
 
 	-- required for telescope
-	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
 
@@ -46,14 +45,23 @@ local plugins = function(use)
 		"nvim-lualine/lualine.nvim",
 		config = "require('plugins.settings.lualine')"
 	})
+
+	use({
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"MunifTanjim/nui.nvim",
+		}
+	})
 	-- tree plugin for viewing project tree
 	--use({
 	--"kyazdani42/nvim-tree.lua",
-		--requires = {
-			--'kyazdani42/nvim-web-devicons', -- optional, for file icons
-		--},
-		--cmd = { "NvimTreeToggle", "NvimTreeFocus" },
-		--config = "require('plugins.settings.nvimtree')"
+	--requires = {
+	--'kyazdani42/nvim-web-devicons', -- optional, for file icons
+	--},
+	--cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+	--config = "require('plugins.settings.nvimtree')"
 	--})
 
 	-- bracket autocompletion
@@ -63,7 +71,7 @@ local plugins = function(use)
 		config = "require('plugins.settings.autopairs')"
 	})
 
--- treesitter
+	-- treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
@@ -71,15 +79,20 @@ local plugins = function(use)
 		config = "require('plugins.settings.treesitter')"
 	})
 
-	-- lsp stuff
-	use("neovim/nvim-lspconfig")
-	use({"L3MON4D3/LuaSnip"})
-	use({"lukas-reineke/indent-blankline.nvim"})
+	-- lsp stuff (server configs are native: lsp/*.lua + vim.lsp.enable)
+	use({ "L3MON4D3/LuaSnip" })
+
+	-- indent guides
+	use({
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		config = "require('plugins.settings.ibl')"
+	})
 
 	-- auto completion/suggestions
 	use({
-	"hrsh7th/nvim-cmp",
-	requires = {
+		"hrsh7th/nvim-cmp",
+		requires = {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
@@ -108,11 +121,11 @@ local plugins = function(use)
 	})
 
 	-- typst preview
-	use ({
+	use({
 		'chomosuke/typst-preview.nvim',
 		tag = 'v1.*',
 		config = function()
-		require 'typst-preview'.setup {}
+			require 'typst-preview'.setup {}
 		end,
 	})
 

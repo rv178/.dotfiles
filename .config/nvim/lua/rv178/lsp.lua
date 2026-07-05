@@ -1,4 +1,4 @@
-vim.g.completeopt='menu,menuone,noselect'
+vim.g.completeopt = 'menu,menuone,noselect'
 
 -- diagnostic display config
 vim.diagnostic.config({
@@ -13,7 +13,7 @@ vim.diagnostic.config({
 })
 
 -- nvim-cmp setup
-local cmp = require'cmp'
+local cmp = require 'cmp'
 
 cmp.setup({
 	window = {
@@ -38,7 +38,7 @@ cmp.setup({
 	}),
 	snippet = {
 		expand = function(args)
-			require'luasnip'.lsp_expand(args.body)
+			require 'luasnip'.lsp_expand(args.body)
 		end
 	},
 })
