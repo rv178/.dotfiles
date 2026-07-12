@@ -26,6 +26,9 @@ map('n', '<leader>0', ':tablast<cr>', { noremap = true })
 map('n', '<leader>p', '*yy', { noremap = true })
 map('n', '<leader>p', '*y', { noremap = true })
 
+map('v', '<leader>tx', '<Plug>(TxmPreview)', { noremap = true })
+map('n', '<leader>tt', ':TxmToggle<CR>', { noremap = true })
+
 map('n', '<leader>+', ':vertical resize +5<CR>', { noremap = true })
 map('n', '<leader>-', ':vertical resize -5<CR>', { noremap = true })
 

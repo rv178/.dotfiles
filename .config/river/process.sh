@@ -4,8 +4,8 @@ fnott -c ~/.config/fnott/fnott.ini &
 killall waybar
 waybar &
 
-killall twenty
-twenty --init &
+twenty -k
+twenty -i
 
 killall polkit-gnome-authentication-agent-1
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &

@@ -31,6 +31,11 @@ local plugins = function(use)
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
 
+	-- latex preview
+	use("/home/rv/extras/lua/txm.nvim")
+	-- this is just for local dev, use this if you're using this config:
+	-- use("rv178/txm.nvim")
+
 	-- nord theme
 	use({
 		"shaunsingh/nord.nvim",
