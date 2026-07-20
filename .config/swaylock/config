@@ -1,6 +1,7 @@
 color=2e3440ff
 ignore-empty-password
 show-failed-attempts
+hide-keyboard-layout
 show-keyboard-layout
 bs-hl-color=b48eadff
 caps-lock-bs-hl-color=d08770ff
@@ -13,7 +14,6 @@ inside-clear-color=81a1c1ff
 inside-ver-color=5e81acff
 inside-wrong-color=bf616aff
 key-hl-color=a3be8cff
-layout-bg-color=2e3440ff
 line-uses-ring
 ring-color=3b4252ff
 ring-clear-color=88c0d0ff
