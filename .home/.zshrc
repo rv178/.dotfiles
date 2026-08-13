@@ -83,5 +83,5 @@ source ~/.zsh/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh
 #   - the correct directories to the PATH
 #   - auto-completion for the opam binary
 # This section can be safely removed at any time if needed.
-[[ ! -r '~/.opam/opam-init/init.zsh' ]] || source '~/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+[[ ! -r "$HOME/.opam/opam-init/init.zsh" ]] || source "$HOME/.opam/opam-init/init.zsh" > /dev/null 2> /dev/null
 # END opam configuration

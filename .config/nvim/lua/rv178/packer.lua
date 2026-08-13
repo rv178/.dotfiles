@@ -134,6 +134,14 @@ local plugins = function(use)
 		end,
 	})
 
+	-- ocaml support
+	use({
+		'tarides/ocaml.nvim',
+		config = function()
+			require 'ocaml'.setup {}
+		end,
+	})
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

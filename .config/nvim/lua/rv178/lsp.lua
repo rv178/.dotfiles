@@ -51,7 +51,7 @@ vim.lsp.config('*', {
 })
 
 -- enable language servers (configs are in ~/.config/nvim/lsp/)
-local servers = { 'bashls', 'rust_analyzer', 'pyright', 'ts_ls', 'gopls', 'clangd', 'tinymist', 'lua_ls', 'ocamld' }
+local servers = { 'bashls', 'rust_analyzer', 'pyright', 'ts_ls', 'gopls', 'clangd', 'tinymist', 'lua_ls', 'ocamllsp' }
 
 vim.api.nvim_create_autocmd('VimEnter', {
 	callback = function()
