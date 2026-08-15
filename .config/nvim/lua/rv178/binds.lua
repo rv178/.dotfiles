@@ -55,7 +55,6 @@ map('v', '<S-up>', '<C-u>', { noremap = true })
 map('v', '<S-down>', '<C-d>', { noremap = true })
 
 -- others
-
 map('n', 'Y', 'y$', { noremap = true })
 map('n', 'Q', '<Nop>', { noremap = true })
 map('n', '<esc>', ':noh<cr>', { noremap = true })
@@ -64,23 +63,26 @@ map('n', '<esc>', ':noh<cr>', { noremap = true })
 map('n', 'cc', 'gcc', { noremap = false })
 map('x', 'cc', 'gc', { noremap = false })
 
-local on_attach = function(client, bufnr)
-	-- Mappings.
-	-- See `:help vim.lsp.*` for documentation on any of the below functions
-	local bufopts = { noremap = true, silent = true, buffer = bufnr }
-	map('n', 'gD', vim.lsp.buf.declaration, bufopts)
-	map('n', 'gd', vim.lsp.buf.definition, bufopts)
-	map('n', 'K', vim.lsp.buf.hover, bufopts)
-	map('n', 'gi', vim.lsp.buf.implementation, bufopts)
-	map('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-	map('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
-	map('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
-	map('n', '<space>wl', function()
-		print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-	end, bufopts)
-	map('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
-	map('n', '<space>rn', vim.lsp.buf.rename, bufopts)
-	map('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
-	map('n', 'gr', vim.lsp.buf.references, bufopts)
-	map('n', '<space>f', vim.lsp.buf.formatting, bufopts)
-end
+-- oil.nvim
+map('n', '-', '<cmd>Oil<CR>', { noremap = false })
+
+vim.api.nvim_create_autocmd('LspAttach', {
+	callback = function(args)
+		local bufopts = { silent = true, buffer = args.buf }
+		vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
+		vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+		vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+		vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
+		vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+		vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, bufopts)
+		vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
+		vim.keymap.set('n', '<leader>wl', function()
+			print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+		end, bufopts)
+		vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
+		vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
+		vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
+		vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+		vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, bufopts)
+	end,
+})

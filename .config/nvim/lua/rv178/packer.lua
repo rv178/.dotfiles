@@ -51,24 +51,6 @@ local plugins = function(use)
 		config = "require('plugins.settings.lualine')"
 	})
 
-	use({
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v3.x",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"MunifTanjim/nui.nvim",
-		}
-	})
-	-- tree plugin for viewing project tree
-	--use({
-	--"kyazdani42/nvim-tree.lua",
-	--requires = {
-	--'kyazdani42/nvim-web-devicons', -- optional, for file icons
-	--},
-	--cmd = { "NvimTreeToggle", "NvimTreeFocus" },
-	--config = "require('plugins.settings.nvimtree')"
-	--})
-
 	-- bracket autocompletion
 	use({
 		"windwp/nvim-autopairs",
@@ -131,6 +113,14 @@ local plugins = function(use)
 		tag = 'v1.*',
 		config = function()
 			require 'typst-preview'.setup {}
+		end,
+	})
+
+	-- file system explorer
+	use({
+		'stevearc/oil.nvim',
+		config = function()
+			require("oil").setup()
 		end,
 	})
 

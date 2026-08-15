@@ -43,6 +43,7 @@ alias loadnvm='export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HO
 alias pm="passmenu"
 alias py="python"
 alias ta="tmux attach"
+alias nvimpack="NVIM_APPNAME=nvimpack nvim"
 
 cda() {
     local dir
