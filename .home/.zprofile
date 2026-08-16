@@ -39,6 +39,7 @@ esac
 
 [[ -d "$HOME/.bin" ]] && PATH="$HOME/.bin:$PATH"
 [[ -d "$HOME/.local/bin" ]] && PATH="$HOME/.local/bin:$PATH"
+[[ -d "$HOME/.local/share/nvimpack/mason/bin" ]] && PATH="$HOME/.local/share/nvimpack/mason/bin:$PATH"
 [[ -d "/usr/local/share/go/bin" ]] && PATH="/usr/local/share/go/bin:$PATH"
 [[ -d "$HOME/go/bin" ]] && PATH="$HOME/go/bin:$PATH"
 [[ -d "$HOME/.cargo/bin" ]] && PATH="$HOME/.cargo/bin:$PATH"
@@ -47,7 +48,6 @@ esac
 [[ -d "$HOME/.spicetify" ]] && PATH="$HOME/.spicetify:$PATH"
 [[ -d "$HOME/.yarn/bin" ]] && PATH="$HOME/.yarn/bin:$PATH"
 [[ -d "$HOME/.local/share/gem/ruby/3.0.0/bin" ]] && PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
-
 
  if [[ -z $WAYLAND_DISPLAY && $(tty) = "/dev/tty1" ]]; then
 	exec dbus-run-session river -log-level debug > /tmp/river-${timestamp}.log 2>&1

@@ -1,0 +1,15 @@
+require("vim._core.ui2").enable({})
+
+require("binds")
+require("pack")
+require("options")
+require("commands")
+
+require('nord').set()
+require('settings.lualine')
+require('settings.mini')
+require('settings.ibl')
+require('settings.autopairs')
+require('settings.cord')
+require('settings.peek')
+require('settings.highlight')
