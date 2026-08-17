@@ -1,4 +1,18 @@
 require('mason').setup()
+require("mason-lspconfig").setup {
+    ensure_installed = {
+        'lua_ls',
+        'marksman',
+        'gopls',
+        'rust_analyzer',
+        'ocamllsp',
+        'bashls',
+        'clangd',
+        'pyright',
+        'tinymist',
+        'ts_ls',
+    },
+}
 
 vim.diagnostic.config({
     virtual_text = true,
@@ -18,9 +32,14 @@ vim.lsp.config("lua_ls", {
 })
 
 vim.lsp.enable({
-    "lua_ls",
-    "marksman",
-    "gopls",
-    "rust_analyzer",
-    "ocamllsp",
+    'lua_ls',
+    'marksman',
+    'gopls',
+    'rust_analyzer',
+    'ocamllsp',
+    'bashls',
+    'clangd',
+    'pyright',
+    'tinymist',
+    'ts_ls',
 })

@@ -30,6 +30,7 @@ vim.pack.add({
     'https://github.com/neovim/nvim-lspconfig',
     -- mason for managing LSPs
     'https://github.com/mason-org/mason.nvim',
+    'https://github.com/mason-org/mason-lspconfig.nvim',
     -- git plugin for showing changes in sidebar
     'https://github.com/airblade/vim-gitgutter',
     -- status bar + bufferline
