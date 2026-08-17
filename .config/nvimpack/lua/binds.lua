@@ -52,6 +52,7 @@ end, { desc = "Toggle built-in undotree" })
 
 -- minifiles
 map('n', '-', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Toggle mini file explorer' })
+-- map('n', '-', '<cmd>Oil<CR>', { desc = 'Toggle mini file explorer' })
 
 -- others
 map('n', 'Y', 'y$', { noremap = true })

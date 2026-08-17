@@ -9,6 +9,17 @@ MiniFiles.setup({
     },
 })
 
+-- remap = to :w
+vim.api.nvim_create_autocmd('User', {
+    pattern = 'MiniFilesBufferCreate',
+    callback = function(args)
+        vim.keymap.set('n', ':w<CR>', MiniFiles.synchronize, {
+            buffer = args.data.buf_id,
+            desc = 'Synchronize mini.files',
+        })
+    end,
+})
+
 -- mininotify
 require('mini.notify').setup({
     content = {
