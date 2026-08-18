@@ -5,7 +5,12 @@ require("pack")
 require("options")
 require("commands")
 
-require('nord').set()
+require("nord").setup({
+    transparent = true,
+    terminal_colors = true,
+})
+vim.cmd.colorscheme('nord')
+
 require('plugins.lualine')
 require('plugins.mini')
 require('plugins.ibl')

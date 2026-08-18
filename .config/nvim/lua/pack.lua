@@ -16,7 +16,7 @@ vim.api.nvim_create_autocmd('PackChanged', {
 
 vim.pack.add({
     -- theme
-    'https://github.com/shaunsingh/nord.nvim',
+    'https://github.com/gbprod/nord.nvim',
     -- utility plugins
     'https://github.com/nvim-mini/mini.nvim',
     -- for telescope
