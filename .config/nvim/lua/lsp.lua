@@ -11,6 +11,7 @@ require("mason-lspconfig").setup {
         'pyright',
         'tinymist',
         'ts_ls',
+        'nil_ls'
     },
 }
 
@@ -42,4 +43,5 @@ vim.lsp.enable({
     'pyright',
     'tinymist',
     'ts_ls',
+    'nil_ls'
 })

@@ -63,6 +63,8 @@ autocmd BufWritePre *.html lua vim.lsp.buf.format(nil, 100)
 autocmd BufWritePre *.css lua vim.lsp.buf.format(nil, 100)
 autocmd BufWritePre *.go lua vim.lsp.buf.format(nil, 100)
 autocmd BufWritePre *.lua lua vim.lsp.buf.format(nil, 100)
+autocmd BufWritePre *.ml lua vim.lsp.buf.format(nil, 100)
+autocmd BufWritePre *.nix lua vim.lsp.buf.format(nil, 100)
 ]])
 
 -- theme settings
