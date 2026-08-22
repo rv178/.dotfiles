@@ -5,7 +5,6 @@ vim.opt.title = true
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 999
-vim.wo.wrap = false
 vim.opt.colorcolumn = "150"
 vim.opt.signcolumn = "yes"
 
@@ -19,7 +18,6 @@ vim.opt.cindent = true
 
 vim.opt.encoding = "UTF-8"
 vim.opt.wrap = false
-vim.opt.smartindent = true
 vim.opt.inccommand = "split"
 vim.opt.updatetime = 300
 vim.opt.mouse = "a"
@@ -66,10 +64,3 @@ autocmd BufWritePre *.lua lua vim.lsp.buf.format(nil, 100)
 autocmd BufWritePre *.ml lua vim.lsp.buf.format(nil, 100)
 autocmd BufWritePre *.nix lua vim.lsp.buf.format(nil, 100)
 ]])
-
--- theme settings
-vim.g.nord_contrast = true
-vim.g.nord_borders = true
-vim.g.nord_disable_background = true
-vim.g.nord_italic = true
-vim.g.nord_uniform_diff_background = true
