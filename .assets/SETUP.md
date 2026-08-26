@@ -12,4 +12,6 @@ Symlink configs (requires stow):
 
 #### Neovim
 
-Run `~/.dotfiles/.config/nvim/lsp.sh` to install LSP binaries.
+I have switched to [nvf](https://github.com/NotAShelf/nvf) for configuring neovim.
+
+Link: https://github.com/rv178/nvim/
