@@ -19,6 +19,9 @@ setopt autocd
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
+bindkey '^p' up-line-or-history
+bindkey '^n' down-line-or-history
+bindkey '^y' autosuggest-accept
 
 # Aliases
 alias zshrc='nvim ~/.zshrc'
