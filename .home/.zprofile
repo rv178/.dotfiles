@@ -49,6 +49,6 @@ esac
 [[ -d "$HOME/.yarn/bin" ]] && PATH="$HOME/.yarn/bin:$PATH"
 [[ -d "$HOME/.local/share/gem/ruby/3.0.0/bin" ]] && PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 
- if [[ -z $WAYLAND_DISPLAY && $(tty) = "/dev/tty1" ]]; then
-	exec dbus-run-session river -log-level debug > /tmp/river-${timestamp}.log 2>&1
+if [[ -z $WAYLAND_DISPLAY && $(tty) = "/dev/tty1" ]]; then
+	exec dbus-run-session river -log-level warning > /tmp/river-${timestamp}.log 2>&1
 fi
